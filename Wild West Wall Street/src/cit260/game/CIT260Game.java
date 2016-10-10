@@ -7,6 +7,11 @@
 package cit260.game;
 
 import Classes.Player;
+import Classes.BankScene;
+import Classes.BattleScene;
+import Classes.Location;
+import Classes.Scene;
+import Classes.Weapons;
 
 /**
  *
@@ -26,6 +31,47 @@ public class CIT260Game {
     
     String playerInfo = playerOne.toString();
     System.out.println(playerInfo);
+    
+        Location oneOne = new Location();
+        
+        oneOne.setRow(1);
+        oneOne.setColumn(1);
+        oneOne.setVisited(Boolean.TRUE);
+        
+        System.out.println(oneOne.toString());
+        
+       Weapons pistol = new Weapons(); 
+       
+       pistol.setType("hand gun");
+       pistol.setPower(4);
+       pistol.setAmmo(6);
+       pistol.setAmmoType("45 slug");
+       
+       System.out.println(pistol.toString());
+       
+       Scene market = new Scene();
+       
+       market.setDescription("market");
+       market.setTravelTime(4);
+       
+       System.out.println(market.toString());
+       
+       BankScene bank = new BankScene();
+       
+       bank.setDeposit(100);
+       bank.setWithdraw(65);
+       bank.setLoan(500);
+       bank.setSavedMoney(699);
+       
+       System.out.println(bank.toString());
+       
+       BattleScene battle = new BattleScene();
+       
+       battle.setAmountOfEnemies(4);
+       battle.setTypeOfEnemies("outlaws");
+       
+       System.out.println(battle.toString());
+               
     
     }
 }
