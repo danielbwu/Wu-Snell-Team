@@ -14,6 +14,81 @@ import java.io.Serializable;
  */
 public class location implements Serializable {
     
-    private string
+    private Integer row;
+    private Integer column;
+    private Boolean visited;
+   
+    
+    public location() {
+    }
+
+    public Integer getRow() {
+        return row;
+    }
+
+    public void setRow(Integer row) {
+        this.row = row;
+    }
+
+    public Integer getColumn() {
+        return column;
+    }
+
+    public void setColumn(Integer column) {
+        this.column = column;
+    }
+
+    public Boolean getVisited() {
+        return visited;
+    }
+
+    public void setVisited(Boolean visited) {
+        this.visited = visited;
+    }
+
+
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.row);
+        hash = 97 * hash + Objects.hashCode(this.column);
+        hash = 97 * hash + Objects.hashCode(this.visited);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final location other = (location) obj;
+        if (!Objects.equals(this.row, other.row)) {
+            return false;
+        }
+        if (!Objects.equals(this.column, other.column)) {
+            return false;
+        }
+        if (!Objects.equals(this.visited, other.visited)) {
+            return false;
+        }
+       
+        
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return '}' + "location{" + "row=" + row + ", column=" + column + ", visited=" + visited;
+    }
+    
+    
+    
     
 }
