@@ -5,10 +5,14 @@
  */
 package Classes;
 
+import java.util.Objects;
+import java.io.Serializable;
+
 /**
  *
- * @author 1dani
+ * @author Daniel
  */
-public class Character {
+public class Character implements Serializable{
+    private String name;
     
 }
