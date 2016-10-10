@@ -13,14 +13,14 @@ import java.io.Serializable;
  *
  * @author Kameron
  */
-public class bankScene implements Serializable {
+public class BankScene implements Serializable {
     
     private double deposit;
     private double withdraw;
     private double loan;
     private double savedMoney;
 
-    public bankScene() {
+    public BankScene() {
     }
     
     public double getDeposit() {
@@ -76,7 +76,7 @@ public class bankScene implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final bankScene other = (bankScene) obj;
+        final BankScene other = (BankScene) obj;
         if (Double.doubleToLongBits(this.deposit) != Double.doubleToLongBits(other.deposit)) {
             return false;
         }

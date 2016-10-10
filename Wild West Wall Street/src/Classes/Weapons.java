@@ -13,14 +13,14 @@ import java.io.Serializable;
  *
  * @author Kameron
  */
-public class weapons implements Serializable {
+public class Weapons implements Serializable {
     
     private String type;
     private double power;
     private double ammo;
     private String ammoType;
 
-    public weapons() {
+    public Weapons() {
     }
     
     public String getType() {
@@ -76,7 +76,7 @@ public class weapons implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final weapons other = (weapons) obj;
+        final Weapons other = (Weapons) obj;
         if (Double.doubleToLongBits(this.power) != Double.doubleToLongBits(other.power)) {
             return false;
         }

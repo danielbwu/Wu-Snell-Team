@@ -12,14 +12,14 @@ import java.io.Serializable;
  *
  * @author Kameron
  */
-public class location implements Serializable {
+public class Location implements Serializable {
     
     private Integer row;
     private Integer column;
     private Boolean visited;
    
     
-    public location() {
+    public Location() {
     }
 
     public Integer getRow() {
@@ -68,7 +68,7 @@ public class location implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final location other = (location) obj;
+        final Location other = (Location) obj;
         if (!Objects.equals(this.row, other.row)) {
             return false;
         }

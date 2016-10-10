@@ -13,14 +13,14 @@ import java.io.Serializable;
  *
  * @author Kameron
  */
-public class scene implements Serializable {
+public class Scene implements Serializable {
     
     private String description;
     private double travelTime;
     private Character displaySymbol;
     private Character trap;
 
-    public scene() {
+    public Scene() {
     }
     
     public String getDescription() {
@@ -76,7 +76,7 @@ public class scene implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final scene other = (scene) obj;
+        final Scene other = (Scene) obj;
         if (Double.doubleToLongBits(this.travelTime) != Double.doubleToLongBits(other.travelTime)) {
             return false;
         }

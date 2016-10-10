@@ -13,12 +13,12 @@ import java.io.Serializable;
  *
  * @author Kameron
  */
-public class battleScene implements Serializable {
+public class BattleScene implements Serializable {
     
     private double amountOfEnemies;
     private String typeOfEnemies;
 
-    public battleScene() {
+    public BattleScene() {
     }
     
     
@@ -58,7 +58,7 @@ public class battleScene implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final battleScene other = (battleScene) obj;
+        final BattleScene other = (BattleScene) obj;
         if (Double.doubleToLongBits(this.amountOfEnemies) != Double.doubleToLongBits(other.amountOfEnemies)) {
             return false;
         }
