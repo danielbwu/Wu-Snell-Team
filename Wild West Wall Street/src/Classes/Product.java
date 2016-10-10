@@ -5,10 +5,13 @@
  */
 package Classes;
 
+import java.util.Objects;
+import java.io.Serializable;
+
 /**
  *
- * @author 1dani
+ * @author Daniel
  */
-public class Product {
+public class Product implements Serializable{
     
 }

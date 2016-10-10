@@ -5,10 +5,68 @@
  */
 package Classes;
 
+import java.util.Objects;
+import java.io.Serializable;
+
 /**
  *
- * @author 1dani
+ * @author Daniel
  */
-public class Item {
+public class Item implements Serializable{
+    
+    private String inventoryType;
+    private double noInStock;
+
+    public String getInventoryType() {
+        return inventoryType;
+    }
+
+    public void setInventoryType(String inventoryType) {
+        this.inventoryType = inventoryType;
+    }
+
+    public double getNoInStock() {
+        return noInStock;
+    }
+
+    public void setNoInStock(double noInStock) {
+        this.noInStock = noInStock;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.inventoryType);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.noInStock) ^ (Double.doubleToLongBits(this.noInStock) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Item other = (Item) obj;
+        if (Double.doubleToLongBits(this.noInStock) != Double.doubleToLongBits(other.noInStock)) {
+            return false;
+        }
+        if (!Objects.equals(this.inventoryType, other.inventoryType)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" + "inventoryType=" + inventoryType + ", noInStock=" + noInStock + '}';
+    }
+    
+    
     
 }
