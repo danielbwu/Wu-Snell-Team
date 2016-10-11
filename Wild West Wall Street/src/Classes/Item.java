@@ -14,8 +14,30 @@ import java.io.Serializable;
  */
 public class Item implements Serializable{
     
+    private String itemName;
+    private String itemDescription;
     private String inventoryType;
     private double noInStock;
+
+    public Item() {
+    }
+    
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getItemDescription() {
+        return itemDescription;
+    }
+
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
+    }
 
     public String getInventoryType() {
         return inventoryType;
@@ -36,8 +58,10 @@ public class Item implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 29 * hash + Objects.hashCode(this.inventoryType);
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.noInStock) ^ (Double.doubleToLongBits(this.noInStock) >>> 32));
+        hash = 37 * hash + Objects.hashCode(this.itemName);
+        hash = 37 * hash + Objects.hashCode(this.itemDescription);
+        hash = 37 * hash + Objects.hashCode(this.inventoryType);
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.noInStock) ^ (Double.doubleToLongBits(this.noInStock) >>> 32));
         return hash;
     }
 
@@ -56,6 +80,12 @@ public class Item implements Serializable{
         if (Double.doubleToLongBits(this.noInStock) != Double.doubleToLongBits(other.noInStock)) {
             return false;
         }
+        if (!Objects.equals(this.itemName, other.itemName)) {
+            return false;
+        }
+        if (!Objects.equals(this.itemDescription, other.itemDescription)) {
+            return false;
+        }
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {
             return false;
         }
@@ -64,9 +94,7 @@ public class Item implements Serializable{
 
     @Override
     public String toString() {
-        return "Item{" + "inventoryType=" + inventoryType + ", noInStock=" + noInStock + '}';
+        return "Item{" + "itemName=" + itemName + ", itemDescription=" + itemDescription + ", inventoryType=" + inventoryType + ", noInStock=" + noInStock + '}';
     }
-    
-    
-    
+
 }
