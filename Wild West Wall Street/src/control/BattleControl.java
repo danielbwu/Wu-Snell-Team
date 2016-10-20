@@ -32,5 +32,6 @@ public class BattleControl {
         if true subtract damage from target health
         if false return -1
         */
+        return -1;
     }
 }
