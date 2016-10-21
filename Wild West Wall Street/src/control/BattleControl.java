@@ -7,7 +7,7 @@ package control;
 
 /**
  *
- * @author 1dani
+ * @author Daniel
  */
 public class BattleControl {
     
@@ -26,12 +26,13 @@ public class BattleControl {
             return false;
     }
     
-    public double attackTarget(double targetHealth, double weaponDamage, int weaponRange, int targetDistance){
-        /*
+/*    public double attackTarget(double targetHealth, double weaponDamage, int weaponRange, int targetDistance){
+        
         call hitTarget()
         if true subtract damage from target health
         if false return -1
-        */
+        
         return -1;
     }
+*/
 }
