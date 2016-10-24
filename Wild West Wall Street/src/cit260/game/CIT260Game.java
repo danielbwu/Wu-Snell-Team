@@ -18,6 +18,7 @@ import Classes.Item;
 import Classes.Map;
 import Classes.Product;
 import Classes.Wagon;
+import citbyui.cit260.WWWS.view.StartProgramView;
 
 /**
  *
@@ -136,5 +137,8 @@ public class CIT260Game {
         oldWagon.setCurrentCapacity(23);
         
         System.out.println(oldWagon.toString());
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
     }
 }
