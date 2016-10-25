@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package citbyui.cit260.WWWS.view;
-
+import java.util.Scanner;
 /**
  *
  * @author Kameron
@@ -15,9 +15,13 @@ public class StartProgramView {
     public StartProgramView() {
         
         this.promptMessage = "\nPlease enter your name: ";
-        
+    /*    Scanner inFile;
+        inFile = new Scanner(System.in);
+        String name = inFile.nextLine();
+    */    
         this.displayBanner();
     }
+    
 
     private void displayBanner() {
         
