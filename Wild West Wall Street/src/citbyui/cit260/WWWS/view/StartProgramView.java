@@ -10,20 +10,22 @@ import java.util.Scanner;
  * @author Kameron
  */
 public class StartProgramView {
-    private String promptMessage;
-    
-    public StartProgramView() {
-        
-        this.promptMessage = "\nPlease enter your name: ";
-    /*    Scanner inFile;
+   private String promptMessage;
+   
+  public StartProgramView() {
+            
+      
+       this.promptMessage = "\nPlease enter your name: ";
+       this.displayBanner();
+        /* Scanner inFile;
         inFile = new Scanner(System.in);
         String name = inFile.nextLine();
     */    
-        this.displayBanner();
-    }
+      
+    } 
     
-
-    private void displayBanner() {
+    
+    public void displayBanner() {
         
         System.out.println(
         "\n***************************************************"
@@ -38,8 +40,52 @@ public class StartProgramView {
         +"\n* its a race agianst time so you best hurry!!!   *"
         );
     }
-
-    public void displayStartProgramView() {
-      System.out.println("\n**** displayStartProgram() function called ***");
+      public void displayStartProgramView() {
+      
+          boolean done = false;
+          do {
+              String playersName = this.getPlayersName();
+              if(playersName.toUpperCase().equals ("Q"))
+                  return;
+              
+              done = this.doAction(playersName);
+              
+          } while (!done);
+          
+          /*
+          do 
+               prompt for and get playerName
+               if playersName == 'Q' then
+               return
+          do requested action and display next view
+          while the view is not done
+          */
     }
+
+    private String getPlayersName() {
+    
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid){
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if(value.length() <1) {
+                System.out.println("\nInvalid vaule: value can not be blank");
+                continue;       
+            }
+            break;
+        }
+        return value;
+    }
+
+    private boolean doAction(String playersName) {
+        System.out.println("\n***doAction() called ***");
+        return true;
+    }
+
 }
