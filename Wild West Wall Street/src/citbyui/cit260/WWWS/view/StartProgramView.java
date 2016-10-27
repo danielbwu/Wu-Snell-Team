@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package citbyui.cit260.WWWS.view;
+import Classes.Player;
+import control.GameControl;
 import java.util.Scanner;
 /**
  *
@@ -90,6 +92,25 @@ public class StartProgramView {
            return false;
         }
         
+    Player player = GameControl.createPlayer(playersName);
+    
+    if (player == null) {
+        System.out.println("\nError creating the player.");
+        return false;
+    }
+    
+    this.displayNextView(player);
+     
+    return true;
+    }
+
+    private void displayNextView(Player player) {
+       System.out.println("\n========================================="
+                         +"\n Welcome to the game " + player.getName()
+                         +"\n We hope you enjoy!"
+                         + "\n========================================");
+       MainMenuView mainMenuView = new MainMenuView();
+               mainMenuView.displayMainMenuView();
     }
 
 }

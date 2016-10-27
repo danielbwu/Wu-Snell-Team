@@ -26,6 +26,25 @@ import citbyui.cit260.WWWS.view.StartProgramView;
  */
 public class CIT260Game {
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        CIT260Game.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        CIT260Game.player = player;
+    }
+    
+    private static Game currentGame =null;
+    private static Player player = null;
+
     /**
      * @param args the command line arguments
      */
@@ -140,5 +159,8 @@ public class CIT260Game {
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+       
     }
+    
+   
 }
