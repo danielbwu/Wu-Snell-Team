@@ -110,7 +110,8 @@ public class StartProgramView {
                          +"\n We hope you enjoy!"
                          + "\n========================================");
        MainMenuView mainMenuView = new MainMenuView();
-               mainMenuView.displayMainMenuView();
+              
+       mainMenuView.displayMainMenuView();
     }
 
 }
