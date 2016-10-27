@@ -84,8 +84,12 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n***doAction() called ***");
-        return true;
+        if(playersName.length() < 2) {
+           System.out.println("\nInvalid players name: "
+           + "This name must be greater than one character length");
+           return false;
+        }
+        
     }
 
 }
