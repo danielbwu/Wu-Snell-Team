@@ -49,10 +49,9 @@ public MainMenuView() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
-        System.out.println(this.menu);
         
         while (!valid){
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.promptMessage +this.menu);
            
             value = keyboard.nextLine();
             value = value.trim();
