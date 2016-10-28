@@ -99,12 +99,14 @@ public HelpMenuView() {
     }
 
     private void goalGame() {
-     System.out.println("goalGame() called");
+     System.out.println("The Goal of Wild West Wall Street is to buy low, sell high\n"
+             + "You start off with a loan and you need to pay it back before the\n"
+             + "loan sharks come after you. Its a race against time so you best hurry!!");
        
     }
 
     private void combatTutorial() {
-        System.out.println("combatTutorial called");
+        System.out.println("");
        
     }
 
