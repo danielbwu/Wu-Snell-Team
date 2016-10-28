@@ -13,19 +13,20 @@ import java.util.Scanner;
  *
  * @author Kameron
  */
-public class MainMenuView {
+public class HelpMenuView {
     private String menu;
     private String promptMessage;
     
-public MainMenuView() {
+public HelpMenuView() {
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n| Main Menu                      |"
+                    +"\n| Help Menu                     |"
                     +"\n----------------------------------"
-                    +"\nN - Start new game"
-                    +"\nL - Load saved game"
-                    +"\nH - Help"
-                    +"\nS - Save game"
+                    +"\nG - Goal of the game"
+                    +"\nC - Combat tutorial"
+                    +"\nL - How loans work"
+                    +"\nM - Moving"
+                    +"\nT - Time"
                     +"\nQ - Quit"
                     +"\n----------------------------------";
         
@@ -34,20 +35,20 @@ public MainMenuView() {
 
    
 
-  public void displayMainMenuView() {
+  public void displayHelpMenuView() {
        
       boolean done = false;
       do {
-          String menuOption =this.getMenuOption();
-          if (menuOption.toUpperCase().equals("Q"))
+          String helpMenuOption =this.getHelpMenuOption();
+          if (helpMenuOption.toUpperCase().equals("Q"))
               return;
           
-          done = this.doAction(menuOption);
+          done = this.doAction(helpMenuOption);
           
       }while(!done);
     }
 
-    private String getMenuOption() {
+    private String getHelpMenuOption() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
@@ -74,17 +75,20 @@ public MainMenuView() {
       choice = choice.toUpperCase();
       
       switch(choice){
-          case "N":
-              this.startNewGame();
+          case "G":
+              this.goalGame();
+              break;
+          case "C":
+              this.combatTutorial();
               break;
           case "L":
-              this.startExistingGame();
+              this.loanHelpMenu();
               break;
-          case "H":
-              this.displayHelpMenu();
+          case "M":
+              this.movingHelpMenu();
               break;
-          case "S":
-              this.saveGame();
+          case "T":
+              this.timeHelpMenu();
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -94,26 +98,27 @@ public MainMenuView() {
       return false;
     }
 
-    private void startNewGame() {
-     GameControl.createNewGame(CIT260Game.getPlayer());
-     
-     GameMenuView gameMenu = new GameMenuView();
-     gameMenu.displayMenu();
+    private void goalGame() {
+     System.out.println("goalGame() called");
        
     }
 
-    private void startExistingGame() {
-        System.out.println("startExistingGame calld");
+    private void combatTutorial() {
+        System.out.println("combatTutorial called");
        
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+    private void loanHelpMenu() {
+        System.out.println("loanHelpMenu called");
     }
 
-    private void saveGame() {
-        System.out.println("saveGame called");
+    private void movingHelpMenu() {
+        System.out.println("movingHelpMenu called");
+    }
+    private void timeHelpMenu() {
+        System.out.println("timeHelpMenu called");
     }
     
 }
+    
+
