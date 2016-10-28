@@ -106,19 +106,33 @@ public HelpMenuView() {
     }
 
     private void combatTutorial() {
-        System.out.println("");
+        System.out.println("Shots will only hit if enemies are within range\n"
+             + "of your weapon.\n"
+             + "If enemies are too close, only melee weapons will work\n");
        
     }
 
     private void loanHelpMenu() {
-        System.out.println("loanHelpMenu called");
+        System.out.println("At the beginning of the game, you will take out a\n"
+             + "loan to start a small business.\n"
+             + "You choose the loan amount and interest rate.\n"
+             + "A smaller loan and/or higher interest rate increases difficulty."
+             + "At the end of each month, a regular payment will automatically\n"
+             + "be withdrawn from your bank account.\n");
     }
 
     private void movingHelpMenu() {
-        System.out.println("movingHelpMenu called");
+        System.out.println("Movement Controls:\n"
+                + "\tW - North\n"
+                + "\tA - West\n"
+                + "\tS - South\n"
+                + "\tD - East\n");
     }
     private void timeHelpMenu() {
-        System.out.println("timeHelpMenu called");
+        System.out.println("Game Time:"
+                + "This game runs on a timer. Time passes every time you move\n"
+                + "to a new location on the map. Faster wagons cause less time\n"
+                + "to pass as you move across the map.\n");
     }
     
 }
