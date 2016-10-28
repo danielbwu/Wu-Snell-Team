@@ -49,18 +49,22 @@ public MainMenuView() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
+        System.out.println(this.menu);
         
         while (!valid){
             System.out.println("\n" + this.promptMessage);
-            
+           
             value = keyboard.nextLine();
             value = value.trim();
             
+           
             if(value.length() <1) {
                 System.out.println("\nInvalid vaule: value can not be blank");
-                continue;       
+                continue;    
+                
             }
             break;
+       
         }
         return value;
     }
@@ -91,6 +95,7 @@ public MainMenuView() {
 
     private void startNewGame() {
        System.out.println("startNewGame Called");
+       
     }
 
     private void startExistingGame() {
