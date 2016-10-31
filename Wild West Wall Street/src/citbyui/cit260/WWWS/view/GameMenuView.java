@@ -15,7 +15,7 @@ public class GameMenuView {
     private String menu;
     private String promptMessage;
     
-public GameMenuView() {
+public void displayMenu() {
         this.menu = "\n"
                     +"\n----------------------------------"
                     +"\n|  Game Menu                   |"
@@ -110,6 +110,7 @@ public GameMenuView() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.displayHelpMenuView();
     }
+
     
 }
 
