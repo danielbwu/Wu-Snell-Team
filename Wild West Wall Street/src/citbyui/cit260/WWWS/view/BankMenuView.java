@@ -5,24 +5,24 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import cit260.game.CIT260Game;
+import control.GameControl;
 import java.util.Scanner;
 
-/**
- *
- * @author Kameron
- */
-public class GameMenuView {
+
+public class BankMenuView {
     private String menu;
     private String promptMessage;
     
-public void displayMenu() {
+public BankMenuView() {
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n|  Game Menu                   |"
+                    +"\n|  Welcome to the Bank                     |"
                     +"\n----------------------------------"
-                    +"\nI - Inventory"
-                    +"\nB - Bounties"
-                    +"\nP - Progress"
+                    +"\nL - Loan"
+                    +"\nB - Check Balances"
+                    +"\nD - Deposit money"
+                    +"\nW - Withdraw money"
                     +"\nH - Help"
                     +"\nQ - Quit"
                     +"\n----------------------------------";
@@ -32,20 +32,20 @@ public void displayMenu() {
 
    
 
-  public void displayGameMenuView() {
+  public void displayBankMenuView() {
        
       boolean done = false;
       do {
-          String gameMenuOption =this.getGameMenuOption();
-          if (gameMenuOption.toUpperCase().equals("Q"))
+          String bankMenuOption =this.getBankMenuOption();
+          if (bankMenuOption.toUpperCase().equals("Q"))
               return;
           
-          done = this.doAction(gameMenuOption);
+          done = this.doAction(bankMenuOption);
           
       }while(!done);
     }
 
-    private String getGameMenuOption() {
+    private String getBankMenuOption() {
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
@@ -72,17 +72,20 @@ public void displayMenu() {
       choice = choice.toUpperCase();
       
       switch(choice){
-          case "I":
-              this.seeInventory();
+          case "L":
+              this.getLoan();
               break;
           case "B":
-              this.seeBounties();
+              this.getBalances();
+              break;              
+          case "D":
+              this.depositMoney();
               break;
-          case "P":
-              this.seeProgress();
+          case "W":
+              this.withdrawMoney();
               break;
           case "H":
-              this.helpMenu();
+              this.loanHelpMenu();
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -92,27 +95,30 @@ public void displayMenu() {
       return false;
     }
 
-    private void seeInventory() {
-     System.out.println("display Inventory");
+    private void getLoan() {
+     System.out.println("displays loan options");
        
     }
-
-    private void seeBounties() {
-        System.out.println("Display current bounties");
+    private void getBalances() {
+        System.out.println("Displays balance is savings and how much money left on loan");
+       
+    }    
+    private void depositMoney() {
+        System.out.println("asks for amount of money wanted to deposit");
        
     }
     
-    private void seeProgress() {
-        System.out.println("dipslay current progress in game");
+    private void withdrawMoney() {
+        System.out.println("asks how much money wanted to withdraw");
     }
 
-    private void helpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+    private void loanHelpMenu() {
+        System.out.println("At the beginning of the game, you will take out a\n"
+             + "loan to start a small business.\n"
+             + "You choose the loan amount and interest rate.\n"
+             + "A smaller loan and/or higher interest rate increases difficulty."
+             + "At the end of each month, a regular payment will automatically\n"
+             + "be withdrawn from your bank account.\n");
     }
-
     
 }
-
-    
-
