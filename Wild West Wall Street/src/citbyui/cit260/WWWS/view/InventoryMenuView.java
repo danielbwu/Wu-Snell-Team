@@ -29,7 +29,7 @@ public class InventoryMenuView {
         this.promptMessage = "\nPlease select an option: ";
     }
     
-     public void displayMainMenuView() { //Calls functions to display initial view and prompt input
+     public void displayInventoryMenuView() { //Calls functions to display initial view and prompt input
        
       boolean done = false;
       do {

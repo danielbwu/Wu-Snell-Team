@@ -103,8 +103,9 @@ public MainMenuView() {
     }
 
     private void startExistingGame() {
-        System.out.println("startExistingGame calld");
-       
+       // System.out.println("startExistingGame calld");
+       TreasureChestView treasureChest = new TreasureChestView();
+       treasureChest.displayTreasurchestView();
     }
 
     private void displayHelpMenu() {

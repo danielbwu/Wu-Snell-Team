@@ -93,7 +93,8 @@ public void displayMenu() {
     }
 
     private void seeInventory() {
-     System.out.println("display Inventory");
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayInventoryMenuView();
        
     }
 
@@ -103,7 +104,8 @@ public void displayMenu() {
     }
     
     private void seeProgress() {
-        System.out.println("dipslay current progress in game");
+       // System.out.println("dipslay current progress in game");
+
     }
 
     private void helpMenu() {
