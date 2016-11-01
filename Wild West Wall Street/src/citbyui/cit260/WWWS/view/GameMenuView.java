@@ -93,8 +93,8 @@ public void displayMenu() {
     }
 
     private void seeInventory() {
-     System.out.println("display Inventory");
-       
+        InventoryMenuView inventoryMenu = new InventoryMenuView();
+        inventoryMenu.displayInventoryMenuView();
     }
 
     private void seeBounties() {
