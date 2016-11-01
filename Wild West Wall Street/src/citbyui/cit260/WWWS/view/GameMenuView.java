@@ -95,7 +95,6 @@ public void displayMenu() {
     private void seeInventory() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
         inventoryMenu.displayInventoryMenuView();
-       
     }
 
     private void seeBounties() {
