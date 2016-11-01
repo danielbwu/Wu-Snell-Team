@@ -33,16 +33,16 @@ public class InventoryMenuView {
        
       boolean done = false;
       do {
-          String menuOption =this.getMenuOption();
-          if (menuOption.toUpperCase().equals("Q"))
+          String inventoryMenuOption =this.getInventoryMenuOption();
+          if (inventoryMenuOption.toUpperCase().equals("Q"))
               return;
           
-          done = this.doAction(menuOption);
+          done = this.doAction(inventoryMenuOption);
           
       }while(!done);
     }
 
-    private String getMenuOption() { //Gets input
+    private String getInventoryMenuOption() { //Gets input
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
