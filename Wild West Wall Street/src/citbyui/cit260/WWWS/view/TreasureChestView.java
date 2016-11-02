@@ -93,11 +93,9 @@ public class TreasureChestView {
             System.out.println("\nError.");
             return false;
         }
-
-           System.out.println("The volume is " + volume);
-           return true;
         
-     
+           System.out.println("\nThe volume is " + volume);
+           return true;
     }
 
 }
