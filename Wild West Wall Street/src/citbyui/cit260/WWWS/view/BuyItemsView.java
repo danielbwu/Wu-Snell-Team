@@ -13,36 +13,37 @@ import java.util.Scanner;
  *
  * @author Daniel
  */
-public class ShopMenuView {
+public class BuyItemsView {
     private String menu;
     private String promptMessage;
     
-    public ShopMenuView(){ //Initial View
+    public BuyItemsView(){ //Initial View
         this.menu = "\n"
                     +"\n----------------------------------"
                     +"\n| Inventory                      |"
                     +"\n----------------------------------"
-                    +"\nB - Buy"
-                    +"\nS - Sell"
+                    +"\n1 - Pine Wood ($10)"
+                    +"\n2 - Raw Iron ($25)"
+                    +"\n3 - Shotgun Shells[5] ($5)"
                     +"\nQ - Exit Menu"
                     +"\n----------------------------------";
-        this.promptMessage = "\nPlease select an option: ";
+        this.promptMessage = "\nWhat would you like to buy? ";
     }
     
-     public void displayShopMenuView() { //Calls functions to display initial view and prompt input
+     public void displayBuyItemsView() { //Calls functions to display initial view and prompt input
        
       boolean done = false;
       do {
-          String shopMenuOption =this.getShopMenuOption();
-          if (shopMenuOption.toUpperCase().equals("Q"))
+          String buyItemsOption =this.getBuyItemsOption();
+          if (buyItemsOption.toUpperCase().equals("Q"))
               return;
           
-          done = this.doAction(shopMenuOption);
+          done = this.doAction(buyItemsOption);
           
       }while(!done);
     }
 
-    private String getShopMenuOption() { //Gets input
+    private String getBuyItemsOption() { //Gets input
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
@@ -69,11 +70,14 @@ public class ShopMenuView {
       choice = choice.toUpperCase();
       
       switch(choice){
-          case "B":
-              this.buyItems();
+          case "1":
+              this.buyItems(10.0);
               break;
-          case "S":
-              this.sellItems();
+          case "2":
+              this.buyItems(25.0);
+              break;
+          case "3":
+              this.buyItems(5.0);
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -83,12 +87,8 @@ public class ShopMenuView {
       return false;
     }
     
-    private void buyItems() {
+    private void buyItems(double price) {
         System.out.println("buyItems() calld");
-       
-    }
-    private void sellItems() {
-        System.out.println("sellItems calld");
        
     }
 }
