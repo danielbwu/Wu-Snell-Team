@@ -15,13 +15,13 @@ public class GameMenuView {
     private String menu;
     private String promptMessage;
     
-public void displayMenu() {
+public GameMenuView() {
         this.menu = "\n"
                     +"\n----------------------------------"
                     +"\n|  Game Menu                   |"
                     +"\n----------------------------------"
                     +"\nI - Inventory"
-                    +"\nB - Bounties"
+                    +"\nB - Bank"
                     +"\nP - Progress"
                     +"\nH - Help"
                     +"\nQ - Quit"
@@ -76,7 +76,7 @@ public void displayMenu() {
               this.seeInventory();
               break;
           case "B":
-              this.seeBounties();
+              this.seeBank();
               break;
           case "P":
               this.seeProgress();
@@ -97,8 +97,9 @@ public void displayMenu() {
         inventoryMenu.displayInventoryMenuView();
     }
 
-    private void seeBounties() {
-        System.out.println("Display current bounties");
+    private void seeBank() {
+        BankMenuView bankMenu = new BankMenuView();
+        bankMenu.displayBankMenuView();
        
     }
     

@@ -14,14 +14,14 @@ import static java.lang.Math.PI;
 public class TreasureChest {
        
     public static double calcVolumeOfCone(double height, double diameter){
-        
+       
         if (height < 0)
             return -1;
         if (diameter < 0 || diameter >12)
             return -1;
         
         double radius = diameter/2;
-        double volume = ((1/3) * PI * radius * radius * height);
+        double volume = ((1.0/3.0) * PI * radius * radius * height);
         return volume;
         
     }
