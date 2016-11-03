@@ -90,7 +90,7 @@ public class TreasureChestView {
         volume = TreasureChest.calcVolumeOfCone(height, diameter);
 
         if (volume < 0) {
-            System.out.println("\nError.");
+            System.out.println("\nError Volume cannot be less than 1. Please try again");
             return false;
         }
         
