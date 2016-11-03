@@ -6,7 +6,7 @@
 package citbyui.cit260.WWWS.view;
 
 import cit260.game.CIT260Game;
-import control.GameControl;
+import control.InventoryControl;
 import java.util.Scanner;
 
 /**
@@ -20,11 +20,11 @@ public class BuyItemsView {
     public BuyItemsView(){ //Initial View
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n| Inventory                      |"
+                    +"\n| Store                          |"
                     +"\n----------------------------------"
                     +"\n1 - Pine Wood ($10)"
                     +"\n2 - Raw Iron ($25)"
-                    +"\n3 - Shotgun Shells[5] ($5)"
+                    +"\n3 - Shotgun Shells[5] ($10)"
                     +"\nQ - Exit Menu"
                     +"\n----------------------------------";
         this.promptMessage = "\nWhat would you like to buy? ";
@@ -71,13 +71,13 @@ public class BuyItemsView {
       
       switch(choice){
           case "1":
-              this.buyItems(10.0);
+              this.buyItems(1, 10.0);
               break;
           case "2":
-              this.buyItems(25.0);
+              this.buyItems(2, 25.0);
               break;
           case "3":
-              this.buyItems(5.0);
+              this.buyItems(3, 5.0);
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -87,8 +87,11 @@ public class BuyItemsView {
       return false;
     }
     
-    private void buyItems(double price) {
+    private void buyItems(int item, double price) {
+        //double total = InventoryControl.sellItems(numSold, price);
+        if (item == 1){
         System.out.println("buyItems() calld");
-       
+        
+        }
     }
 }

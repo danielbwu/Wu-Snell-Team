@@ -7,14 +7,14 @@ package control;
 
 /**
  *
- * @author 1dani
+ * @author Daniel
  */
 public class InventoryControl {
     
     public double sellItems(double numSold, double price){
         
-        double profit = numSold * price;
+        double total = numSold * price;
         
-        return profit;
+        return total;
     }
 }
