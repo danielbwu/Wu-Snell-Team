@@ -16,11 +16,11 @@ public class TreasureChest {
     public static double calcVolumeOfCone(double height, double diameter){
        
         if (height < 1){
-            System.out.println("\nInvalid input: Height must be higher then 0.");
+          //  System.out.println("\nInvalid input: Height must be higher then 0.");
         return -1;
         }
         if (diameter < 0 || diameter >12){
-            System.out.println("Invalid input: Diameter must be between 1 and 12.");
+          //  System.out.println("Invalid input: Diameter must be between 1 and 12.");
                 return -1;
         }
         

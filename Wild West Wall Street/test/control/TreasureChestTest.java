@@ -78,9 +78,9 @@ public class TreasureChestTest {
          height = 0.0;
          diameter = 12.0;
         TreasureChest instance5 = new TreasureChest();
-         expResult = 0.0;
+         expResult = -1.0;
          result = instance5.calcVolumeOfCone(height, diameter);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, -1.0);
         
         System.out.println("\t test case 6");
          height = 20.0;
