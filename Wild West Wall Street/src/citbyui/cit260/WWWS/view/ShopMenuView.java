@@ -20,7 +20,7 @@ public class ShopMenuView {
     public ShopMenuView(){ //Initial View
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n| Inventory                      |"
+                    +"\n| Shop                           |"
                     +"\n----------------------------------"
                     +"\nB - Buy"
                     +"\nS - Sell"
