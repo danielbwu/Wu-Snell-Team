@@ -84,7 +84,9 @@ public class ShopMenuView {
     }
     
     private void buyItems() {
-        System.out.println("buyItems() calld");
+        //System.out.println("buyItems() calld");
+        BuyItemsView buyItems = new BuyItemsView();
+        buyItems.displayBuyItemsView();
        
     }
     private void sellItems() {

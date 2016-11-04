@@ -24,7 +24,7 @@ public class BuyItemsView {
                     +"\n----------------------------------"
                     +"\n1 - Pine Wood ($10)"
                     +"\n2 - Raw Iron ($25)"
-                    +"\n3 - Shotgun Shells[5] ($10)"
+                    +"\n3 - Shotgun Shells ($2)"
                     +"\nQ - Exit Menu"
                     +"\n----------------------------------";
         this.promptMessage = "\nWhat would you like to buy? ";
@@ -77,7 +77,7 @@ public class BuyItemsView {
               this.buyItems(2, 25.0);
               break;
           case "3":
-              this.buyItems(3, 5.0);
+              this.buyItems(3, 2.0);
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -88,10 +88,24 @@ public class BuyItemsView {
     }
     
     private void buyItems(int item, double price) {
-        //double total = InventoryControl.sellItems(numSold, price);
-        if (item == 1){
-        System.out.println("buyItems() calld");
+        System.out.println("How much do you want to buy?");
+        Scanner input = new Scanner(System.in);
+        double numSold = input.nextDouble();
         
+        InventoryControl buyItems = new InventoryControl();
+        double total = buyItems.totalCost(numSold, price);
+        
+        if (item == 1){
+            System.out.println("Bought " + numSold + " pine wood for $" 
+                    + total + "\n");
+        }
+        else if (item == 2){
+            System.out.println("Bought " + numSold + " raw iron for $" 
+                    + total + "\n");
+        }
+        else if (item == 3){
+            System.out.println("Bought " + numSold + " shotgun shells for $" 
+                    + total + "\n");
         }
     }
 }
