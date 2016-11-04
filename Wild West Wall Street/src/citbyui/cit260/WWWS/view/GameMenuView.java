@@ -22,7 +22,7 @@ public GameMenuView() {
                     +"\n----------------------------------"
                     +"\nI - Inventory"
                     +"\nB - Bank"
-                    +"\nP - Progress"
+                    +"\nP - Progress (Shop Menu test)"
                     +"\nH - Help"
                     +"\nQ - Quit"
                     +"\n----------------------------------";
@@ -105,6 +105,8 @@ public GameMenuView() {
     
     private void seeProgress() {
        // System.out.println("dipslay current progress in game");
+       ShopMenuView shopMenu = new ShopMenuView();
+       shopMenu.displayShopMenuView();
 
     }
 

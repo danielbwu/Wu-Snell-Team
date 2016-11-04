@@ -20,7 +20,7 @@ public class ShopMenuView {
     public ShopMenuView(){ //Initial View
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n| Inventory                      |"
+                    +"\n| Shop                           |"
                     +"\n----------------------------------"
                     +"\nB - Buy"
                     +"\nS - Sell"
@@ -84,7 +84,9 @@ public class ShopMenuView {
     }
     
     private void buyItems() {
-        System.out.println("buyItems() calld");
+        //System.out.println("buyItems() calld");
+        BuyItemsView buyItems = new BuyItemsView();
+        buyItems.displayBuyItemsView();
        
     }
     private void sellItems() {

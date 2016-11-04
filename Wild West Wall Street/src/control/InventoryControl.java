@@ -11,7 +11,7 @@ package control;
  */
 public class InventoryControl {
     
-    public double sellItems(double numSold, double price){
+    public double totalCost(double numSold, double price){
         
         double total = numSold * price;
         
