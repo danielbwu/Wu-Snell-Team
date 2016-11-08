@@ -12,26 +12,30 @@ import java.util.Scanner;
  * @author Daniel
  */
 public interface ViewInterface {
+ public void display();
+ public String getInput();
+ public boolean doAction(String value);
     
 
     
-   /* public String getInput() {
+  /* public String getInput() {
 
         Scanner keyboard = new Scanner(System.in);
-        String value = "";
         boolean valid = false;
+        String selection = null;
 
         while (!valid) {
-          //  System.out.println("\n" + this.promptMessage);
+          //  System.out.println("\n" + this.displayMessage);
 
-            value = keyboard.nextLine();
+            selection = keyboard.nextLine();
+            selection = selection.trim();
 
-            if (value.length() < 1) {
+            if (selection.length() < 1) {
                 System.out.println("\nInvalid vaule: value can not be blank");
                 continue;
             }
             break;
         }
-        return value;
+        return selection;
     }*/
 }

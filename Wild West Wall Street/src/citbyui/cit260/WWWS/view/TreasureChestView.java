@@ -56,7 +56,7 @@ public class TreasureChestView {
 
     }
 
-    private String getInput() {
+    public String getInput() {
 
         Scanner keyboard = new Scanner(System.in);
         String value = "";
@@ -75,7 +75,6 @@ public class TreasureChestView {
         }
         return value;
     }
-
   
 
     private boolean doAction(String strHeight) {
