@@ -18,7 +18,7 @@ public class MainMenuView extends View {
     private String promptMessage;
     
 public MainMenuView() {
-        super("\n"
+              super("\n"
                     +"\n----------------------------------"
                     +"\n| Main Menu                      |"
                     +"\n----------------------------------"
@@ -27,9 +27,9 @@ public MainMenuView() {
                     +"\nH - Help"
                     +"\nS - Save game"
                     +"\nQ - Quit"
-                    +"\n----------------------------------");
+                    +"\n----------------------------------"
+                    +"\nPlease select an option: ");
         
-         this.promptMessage = "\nPlease select an option: ";
     }
 
    

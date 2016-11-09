@@ -14,6 +14,7 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     protected String displayMessage;
+    protected String displayMessage1;
     
     public View(){
         
@@ -22,6 +23,7 @@ public abstract class View implements ViewInterface {
     public View(String message){
         this.displayMessage = message;
     }
+    
     
     @Override
     public void display() {
