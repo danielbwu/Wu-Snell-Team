@@ -12,9 +12,9 @@ import java.util.Scanner;
  * @author Daniel
  */
 public interface ViewInterface {
- public void display();
- public String getInput();
- public boolean doAction(String value);
+    public void display();
+    public String getInput();
+    public boolean doAction(String value);
     
 
 
