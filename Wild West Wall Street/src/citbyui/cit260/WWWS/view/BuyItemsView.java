@@ -13,12 +13,12 @@ import java.util.Scanner;
  *
  * @author Daniel
  */
-public class BuyItemsView {
+public class BuyItemsView extends View {
     private String menu;
     private String promptMessage;
     
     public BuyItemsView(){ //Initial View
-        this.menu = "\n"
+             super( "\n"
                     +"\n----------------------------------"
                     +"\n| Store                          |"
                     +"\n----------------------------------"
@@ -26,11 +26,12 @@ public class BuyItemsView {
                     +"\n2 - Raw Iron ($25)"
                     +"\n3 - Shotgun Shells ($2)"
                     +"\nQ - Exit Menu"
-                    +"\n----------------------------------";
-        this.promptMessage = "\nWhat would you like to buy? ";
+                    +"\n----------------------------------"
+                    +"\nWhat would you like to buy? ");
+       
     }
     
-     public void displayBuyItemsView() { //Calls functions to display initial view and prompt input
+     /*public void displayBuyItemsView() { //Calls functions to display initial view and prompt input
        
       boolean done = false;
       do {
@@ -64,9 +65,9 @@ public class BuyItemsView {
        
         }
         return value;
-    }
-    
-    private boolean doAction(String choice) {
+    }*/
+    @Override
+    public boolean doAction(String choice) {
       choice = choice.toUpperCase();
       
       switch(choice){

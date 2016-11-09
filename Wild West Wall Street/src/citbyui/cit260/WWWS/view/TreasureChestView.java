@@ -12,14 +12,14 @@ import java.util.Scanner;
  *
  * @author Kameron
  */
-public class TreasureChestView {
+public class TreasureChestView extends View {
 
     private String promptMessage;
   
 
     public TreasureChestView() {
 
-        this.promptMessage = "\nPlease enter the height: ";
+        this.promptMessage =("\nPlease enter the height: ");
 
         this.displayMessage();
 
@@ -76,8 +76,8 @@ public class TreasureChestView {
         return value;
     }
   
-
-    private boolean doAction(String strHeight) {
+@Override
+    public boolean doAction(String strHeight) {
 
         double volume;
         this.promptMessage =  "\nPlease enter the diameter: ";

@@ -11,11 +11,11 @@ import java.util.Scanner;
  *
  * @author Kameron
  */
-public class StartProgramView {
+public class StartProgramView extends View{
    private String promptMessage;
    
   public StartProgramView() {
-            
+             
       
        this.promptMessage = "\nPlease enter your name: ";
        this.displayBanner();
@@ -84,8 +84,8 @@ public class StartProgramView {
         }
         return value;
     }
-
-    private boolean doAction(String playersName) {
+@Override
+    public boolean doAction(String playersName) {
         if(playersName.length() < 2) {
            System.out.println("\nInvalid players name: "
            + "This name must be greater than one character length");

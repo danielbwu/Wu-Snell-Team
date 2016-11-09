@@ -10,12 +10,12 @@ import control.GameControl;
 import java.util.Scanner;
 
 
-public class BankMenuView {
+public class BankMenuView extends View{
     private String menu;
     private String promptMessage;
     
 public BankMenuView() {
-        this.menu = "\n"
+        super("\n"
                     +"\n----------------------------------"
                     +"\n|  Welcome to the Bank                     |"
                     +"\n----------------------------------"
@@ -25,14 +25,15 @@ public BankMenuView() {
                     +"\nW - Withdraw money"
                     +"\nH - Help"
                     +"\nQ - Quit"
-                    +"\n----------------------------------";
+                    +"\n----------------------------------"
+                    +"\nPlease select an option: ");
         
-         this.promptMessage = "\nPlease select an option: ";
+         
     }
 
    
 
-  public void displayBankMenuView() {
+ /* public void displayBankMenuView() {
        
       boolean done = false;
       do {
@@ -66,12 +67,13 @@ public BankMenuView() {
        
         }
         return value;
-    }
+    }*/
 
-    private boolean doAction(String choice) {
-      choice = choice.toUpperCase();
+    @Override
+    public boolean doAction(String value) {
+      value = value.toUpperCase();
       
-      switch(choice){
+      switch(value){
           case "L":
               this.getLoan();
               break;

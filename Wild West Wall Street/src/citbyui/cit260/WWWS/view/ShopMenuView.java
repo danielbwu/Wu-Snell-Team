@@ -13,23 +13,23 @@ import java.util.Scanner;
  *
  * @author Daniel
  */
-public class ShopMenuView {
+public class ShopMenuView extends View {
     private String menu;
     private String promptMessage;
     
     public ShopMenuView(){ //Initial View
-        this.menu = "\n"
+               super("\n"
                     +"\n----------------------------------"
                     +"\n| Shop                           |"
                     +"\n----------------------------------"
                     +"\nB - Buy"
                     +"\nS - Sell"
                     +"\nQ - Exit Menu"
-                    +"\n----------------------------------";
-        this.promptMessage = "\nPlease select an option: ";
+                    +"\n----------------------------------"
+                    +"\nPlease select an option: ");
     }
     
-     public void displayShopMenuView() { //Calls functions to display initial view and prompt input
+    /* public void displayShopMenuView() { //Calls functions to display initial view and prompt input
        
       boolean done = false;
       do {
@@ -63,9 +63,9 @@ public class ShopMenuView {
        
         }
         return value;
-    }
-    
-    private boolean doAction(String choice) {
+    }*/
+    @Override
+    public boolean doAction(String choice) {
       choice = choice.toUpperCase();
       
       switch(choice){
@@ -86,7 +86,7 @@ public class ShopMenuView {
     private void buyItems() {
         //System.out.println("buyItems() calld");
         BuyItemsView buyItems = new BuyItemsView();
-        buyItems.displayBuyItemsView();
+        buyItems.display();
        
     }
     private void sellItems() {

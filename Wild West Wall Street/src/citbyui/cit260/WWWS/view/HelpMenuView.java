@@ -13,12 +13,12 @@ import java.util.Scanner;
  *
  * @author Kameron
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
     private String menu;
     private String promptMessage;
     
 public HelpMenuView() {
-        this.menu = "\n"
+               super("\n"
                     +"\n----------------------------------"
                     +"\n| Help Menu                     |"
                     +"\n----------------------------------"
@@ -28,14 +28,15 @@ public HelpMenuView() {
                     +"\nM - Moving"
                     +"\nT - Time"
                     +"\nQ - Quit"
-                    +"\n----------------------------------";
+                    +"\n----------------------------------"
+                    +"\nPlease select an option: ");
         
-         this.promptMessage = "\nPlease select an option: ";
+         
     }
 
    
 
-  public void displayHelpMenuView() {
+  /*public void displayHelpMenuView() {
        
       boolean done = false;
       do {
@@ -69,9 +70,9 @@ public HelpMenuView() {
        
         }
         return value;
-    }
-
-    private boolean doAction(String choice) {
+    }*/
+@Override
+    public boolean doAction(String choice) {
       choice = choice.toUpperCase();
       
       switch(choice){

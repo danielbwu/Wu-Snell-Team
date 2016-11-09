@@ -94,25 +94,25 @@ public GameMenuView() {
 
     private void seeInventory() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.displayInventoryMenuView();
+        inventoryMenu.display();
     }
 
     private void seeBank() {
         BankMenuView bankMenu = new BankMenuView();
-        bankMenu.displayBankMenuView();
+        bankMenu.display();
        
     }
     
     private void seeProgress() {
        // System.out.println("dipslay current progress in game");
        ShopMenuView shopMenu = new ShopMenuView();
-       shopMenu.displayShopMenuView();
+       shopMenu.display();
 
     }
 
     private void helpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     
