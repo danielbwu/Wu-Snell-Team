@@ -55,7 +55,7 @@ public class TreasureChestView extends View {
         } while (!done);
 
     }
-
+@Override
     public String getInput() {
 
         Scanner keyboard = new Scanner(System.in);

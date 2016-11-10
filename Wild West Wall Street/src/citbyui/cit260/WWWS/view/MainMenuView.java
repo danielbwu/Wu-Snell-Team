@@ -5,17 +5,13 @@
  */
 package citbyui.cit260.WWWS.view;
 
-import cit260.game.CIT260Game;
-import control.GameControl;
-import java.util.Scanner;
 
 /**
  *
  * @author Kameron
  */
 public class MainMenuView extends View {
-    private String menu;
-    private String promptMessage;
+
     
 public MainMenuView() {
               super("\n"
@@ -113,7 +109,8 @@ public MainMenuView() {
     }
 
     private void saveGame() {
-        System.out.println("saveGame called");
+        BattleIntroView battleMenu = new BattleIntroView();
+        battleMenu.display();
     }
     
 }
