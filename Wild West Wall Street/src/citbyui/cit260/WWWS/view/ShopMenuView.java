@@ -14,8 +14,6 @@ import java.util.Scanner;
  * @author Daniel
  */
 public class ShopMenuView extends View {
-    private String menu;
-    private String promptMessage;
     
     public ShopMenuView(){ //Initial View
                super("\n"
@@ -90,7 +88,8 @@ public class ShopMenuView extends View {
        
     }
     private void sellItems() {
-        System.out.println("sellItems calld");
+        SellItemsView sellItems = new SellItemsView();
+        sellItems.display();
        
     }
 }

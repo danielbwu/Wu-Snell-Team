@@ -14,8 +14,6 @@ import java.util.Scanner;
  * @author Daniel
  */
 public class BuyItemsView extends View {
-    private String menu;
-    private String promptMessage;
     
     public BuyItemsView(){ //Initial View
              super( "\n"
