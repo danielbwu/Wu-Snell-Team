@@ -5,6 +5,7 @@
  */
 package Classes;
 
+import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 
@@ -12,75 +13,34 @@ import java.io.Serializable;
  *
  * @author Daniel
  */
-public class Character implements Serializable{
-    private String name;
-    private String location;
-    private String description;
+public enum Character implements Serializable{
+    
+        BillyTheKid("The retired king of the Wild west, owns the bank and gives out loans, dont get on his bad side."),
+        ButchCassidy("Once a theif but gave that up long ago, now he owns the general stores for you to sell your products."),
+        CalamityJane("Long time legend, knows a ton about the wild west and guide you to help you become successful");
 
-    public Character() {
+    private final Point location;
+    private final String description;
+
+    Character(String description) {
+        this.description =description;
+        location = new Point(1,1);
     }
     
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLocation() {
+    public Point getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + Objects.hashCode(this.location);
-        hash = 79 * hash + Objects.hashCode(this.description);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Character other = (Character) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.location, other.location)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public String toString() {
-        return "Character{" + "name=" + name + ", location=" + location + ", description=" + description + '}';
+        return "Character{ location=" + location + ", description=" + description + '}';
     }
     
     
