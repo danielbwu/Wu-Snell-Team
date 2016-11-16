@@ -15,6 +15,8 @@ import java.io.Serializable;
 public class Game implements Serializable{
     
     private double totalTime;
+    private Wagon wagon;
+    private Item[] inventory;
 
     public Game() {
     }
@@ -27,6 +29,24 @@ public class Game implements Serializable{
     public void setTotalTime(double totalTime) {
         this.totalTime = totalTime;
     }
+
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+
+    public Item[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Item[] inventory) {
+        this.inventory = inventory;
+    }
+    
+    
 
     @Override
     public int hashCode() {

@@ -15,8 +15,11 @@ import java.io.Serializable;
  */
 public enum Location implements Serializable {
     
-    bank("The place to get the money"),
-    store("the place to sell the goods.");
+    City1("city1"),
+    City2("city2"),
+    City3("city3"),
+    City4("city4"),
+    City5("city5");
     
     private final String description;
     private final Point coordinates;

@@ -5,6 +5,9 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import cit260.game.CIT260Game;
+import control.GameControl;
+
 
 /**
  *
@@ -91,7 +94,8 @@ public MainMenuView() {
     }
 
     private void startNewGame() {
-     //GameControl.createNewGame(CIT260Game.getPlayer());
+     GameControl.createNewGame(CIT260Game.getPlayer());
+     
      GameMenuView gameMenu = new GameMenuView();
      gameMenu.displayGameMenuView();
        

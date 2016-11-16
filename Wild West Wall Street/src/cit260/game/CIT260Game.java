@@ -60,14 +60,7 @@ public class CIT260Game {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
     
-        //Location
-        Location oneOne = new Location();
-        
-        oneOne.setRow(1);
-        oneOne.setColumn(1);
-        oneOne.setVisited(Boolean.TRUE);
-        
-        System.out.println(oneOne.toString());
+
         
         //Weapon - Pistol
         Weapons pistol = new Weapons(); 
@@ -105,14 +98,7 @@ public class CIT260Game {
        
         System.out.println(battle.toString());
                
-        //Character - Sid
-        Character Sid = new Character();
-        
-        Sid.setName("Sid");
-        Sid.setLocation("Thatch Town");
-        Sid.setDescription("A middle-aged man in a brown suit and slacks.");
-        
-        System.out.println(Sid.toString());
+
         
         //Game
         Game slotOne = new Game();
