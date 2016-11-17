@@ -22,6 +22,7 @@ public class SellItemsView extends View {
                     +"\n1 - Pine Wood ($15)"
                     +"\n2 - Raw Iron ($15)"
                     +"\n3 - Leather ($7)"
+                    +"\n4 - Jug of Water ($3)"
                     +"\nQ - Exit Menu"
                     +"\n----------------------------------"
                     +"\nWhat would you like to sell? ");
