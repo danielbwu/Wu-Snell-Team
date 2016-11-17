@@ -5,7 +5,11 @@
  */
 package control;
 
+import Classes.Game;
+import Classes.Item;
+import Classes.Map;
 import Classes.Player;
+import Classes.Wagon;
 import cit260.game.CIT260Game;
 
 /**
@@ -30,7 +34,26 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("\n CreateNewGame called");
+       
+        Game game = new Game();
+        CIT260Game.setCurrentGame(game);
+        
+        game.setPlayer(player);
+       
+        Item[] invetoryList = GameControl.createInventoryList();
+        game.setInventory(invetoryList);
+        
+        Wagon wagon = new Wagon();
+        game.setWagon(wagon);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.moveActorsToStartingLocation(map);
     }
+    public static Item[] createInventoryList(){
+            System.out.println("called createInventoryList in game control");
+            return null;
+        }
     
 }

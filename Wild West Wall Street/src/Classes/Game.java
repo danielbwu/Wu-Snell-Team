@@ -15,8 +15,11 @@ import java.io.Serializable;
 public class Game implements Serializable{
     
     private double totalTime;
+    
+    private Player player;
     private Wagon wagon;
     private Item[] inventory;
+    private Map map;
 
     public Game() {
     }
@@ -30,6 +33,14 @@ public class Game implements Serializable{
         this.totalTime = totalTime;
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
     public Wagon getWagon() {
         return wagon;
     }
@@ -44,6 +55,14 @@ public class Game implements Serializable{
 
     public void setInventory(Item[] inventory) {
         this.inventory = inventory;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
     
     
