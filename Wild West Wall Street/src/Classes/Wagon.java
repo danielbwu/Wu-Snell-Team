@@ -17,9 +17,13 @@ public class Wagon implements Serializable{
     private double speed;
     private double maxCapacity;
     private double currentCapacity;
-    private double health;
+    private double maxHealth;
 
     public Wagon() {
+        this.speed = 0;
+        this.maxCapacity = 30;
+        this.currentCapacity = 0;
+        this.maxHealth = 100;
     }
     
 
@@ -48,11 +52,11 @@ public class Wagon implements Serializable{
     }
 
     public double getHealth() {
-        return health;
+        return maxHealth;
     }
 
-    public void setHealth(double health) {
-        this.health = health;
+    public void setHealth(double maxHealth) {
+        this.maxHealth = maxHealth;
     }
 
     @Override
@@ -61,7 +65,7 @@ public class Wagon implements Serializable{
         hash = 47 * hash + (int) (Double.doubleToLongBits(this.speed) ^ (Double.doubleToLongBits(this.speed) >>> 32));
         hash = 47 * hash + (int) (Double.doubleToLongBits(this.maxCapacity) ^ (Double.doubleToLongBits(this.maxCapacity) >>> 32));
         hash = 47 * hash + (int) (Double.doubleToLongBits(this.currentCapacity) ^ (Double.doubleToLongBits(this.currentCapacity) >>> 32));
-        hash = 47 * hash + (int) (Double.doubleToLongBits(this.health) ^ (Double.doubleToLongBits(this.health) >>> 32));
+        hash = 47 * hash + (int) (Double.doubleToLongBits(this.maxHealth) ^ (Double.doubleToLongBits(this.maxHealth) >>> 32));
         return hash;
     }
 
@@ -86,7 +90,7 @@ public class Wagon implements Serializable{
         if (Double.doubleToLongBits(this.currentCapacity) != Double.doubleToLongBits(other.currentCapacity)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.health) != Double.doubleToLongBits(other.health)) {
+        if (Double.doubleToLongBits(this.maxHealth) != Double.doubleToLongBits(other.maxHealth)) {
             return false;
         }
         return true;
@@ -94,7 +98,7 @@ public class Wagon implements Serializable{
 
     @Override
     public String toString() {
-        return "Wagon{" + "speed=" + speed + ", maxCapacity=" + maxCapacity + ", currentCapacity=" + currentCapacity + ", health=" + health + '}';
+        return "Wagon{" + "speed=" + speed + ", maxCapacity=" + maxCapacity + ", currentCapacity=" + currentCapacity + ", maxHealth=" + maxHealth + '}';
     }
     
     
