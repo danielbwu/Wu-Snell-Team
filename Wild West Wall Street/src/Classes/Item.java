@@ -12,89 +12,30 @@ import java.io.Serializable;
  *
  * @author Daniel
  */
-public class Item implements Serializable{
+public enum Item implements Serializable{
     
-    private String itemName;
-    private String itemDescription;
-    private String inventoryType;
-    private double noInStock;
+    PineWood(1, "Sturdy planks cut from a pine tree. Useful as construction material."),
+    RawIron(2, "Raw iron ore. Useless to the average man. A blacksmith, however..."),
+    RefinedIron(3, "Strong, pruified metal. An invaluable resource for construction, tools, and crafts."),
+    Leather(4, "Thick, durable cow hide."),
+    Flour(5, "Finely ground wheat flour. Useful for baking."),
+    Water(6, "Liquid Dihydrogen Monoxide. Lethal if consumed in excessive quantities."),
+    PistolAmmo(7, "Standard 9mm rounds."),
+    RifleAmmo(8, "Standard Winchester rifle rounds."),
+    ShotgunAmmo(9, "Standard 12-gauge shells."),
+    WagonParts(10, "Used to repair and reinforce wagons.");
 
-    public Item() {
-    }
-    
+    private final String itemDescription;
+    private final int itemId;
 
-    public String getItemName() {
-        return itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public String getItemDescription() {
-        return itemDescription;
-    }
-
-    public void setItemDescription(String itemDescription) {
+    Item(int itemId, String itemDescription) {    
         this.itemDescription = itemDescription;
+        this.itemId = itemId;
     }
-
-    public String getInventoryType() {
-        return inventoryType;
-    }
-
-    public void setInventoryType(String inventoryType) {
-        this.inventoryType = inventoryType;
-    }
-
-    public double getNoInStock() {
-        return noInStock;
-    }
-
-    public void setNoInStock(double noInStock) {
-        this.noInStock = noInStock;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.itemName);
-        hash = 37 * hash + Objects.hashCode(this.itemDescription);
-        hash = 37 * hash + Objects.hashCode(this.inventoryType);
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.noInStock) ^ (Double.doubleToLongBits(this.noInStock) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Item other = (Item) obj;
-        if (Double.doubleToLongBits(this.noInStock) != Double.doubleToLongBits(other.noInStock)) {
-            return false;
-        }
-        if (!Objects.equals(this.itemName, other.itemName)) {
-            return false;
-        }
-        if (!Objects.equals(this.itemDescription, other.itemDescription)) {
-            return false;
-        }
-        if (!Objects.equals(this.inventoryType, other.inventoryType)) {
-            return false;
-        }
-        return true;
-    }
-
+    
     @Override
     public String toString() {
-        return "Item{" + "itemName=" + itemName + ", itemDescription=" + itemDescription + ", inventoryType=" + inventoryType + ", noInStock=" + noInStock + '}';
+        return "Item{" + ", itemDescription=" + itemDescription + ", itemId=" + itemId + '}';
     }
 
 }
