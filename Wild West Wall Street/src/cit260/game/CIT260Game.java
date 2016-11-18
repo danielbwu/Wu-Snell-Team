@@ -115,15 +115,7 @@ public class CIT260Game {
         
         System.out.println(wildWest.toString());
         
-        //Item
-        Item pineWood = new Item();
-        
-        pineWood.setItemName("Pine Wood");
-        pineWood.setItemDescription("Useful for building. Can be bought and sold at markets.");
-        pineWood.setInventoryType("Material");
-        pineWood.setNoInStock(25);
-        
-        System.out.println(pineWood.toString());
+       
         
         //Product
         Product ironBar = new Product();

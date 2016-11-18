@@ -40,8 +40,8 @@ public class GameControl {
         
         game.setPlayer(player);
        
-        Item[] invetoryList = GameControl.createInventoryList();
-        game.setInventory(invetoryList);
+       // Item[] invetoryList = GameControl.createInventoryList();
+       // game.setInventory(invetoryList);
         
         Wagon wagon = new Wagon();
         game.setWagon(wagon);
@@ -53,7 +53,7 @@ public class GameControl {
     }
  
     
-    public static Item[] createInventoryList(){
+    /*public static Item[] createInventoryList(){
         //arrayList of inventory Items
         Item[] inventory = new Item[11];
         
@@ -119,5 +119,5 @@ public class GameControl {
         
         return inventory;
            
-}
+}*/
 }
