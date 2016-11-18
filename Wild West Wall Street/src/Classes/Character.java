@@ -17,7 +17,11 @@ public enum Character implements Serializable{
     
         BillyTheKid("The retired king of the Wild west, owns the bank and gives out loans, dont get on his bad side."),
         ButchCassidy("Once a theif but gave that up long ago, now he owns the general stores for you to sell your products."),
-        CalamityJane("Long time legend, knows a ton about the wild west and guide you to help you become successful");
+        CalamityJane("Long time legend, knows a ton about the wild west and guide you to help you become successful"),
+        Bandit("will rob you blind"),
+        StoreClerk("sell you goods"),
+        BankClerk("handle your banking needs");
+        
 
     private final Point location;
     private final String description;
