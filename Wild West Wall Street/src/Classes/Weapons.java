@@ -11,90 +11,47 @@ import java.io.Serializable;
 
 /**
  *
- * @author Kameron
+ * @author Kameron/Daniel
  */
-public class Weapons implements Serializable {
+public enum Weapons implements Serializable {
     
-    private String type;
-    private double power;
-    private double ammo;
-    private String ammoType;
-
-    public Weapons() {
-    }
+    //Melee Weapons
+    WoodenBat("Melee", 10, 0, "none", 0, "Sometimes, a strong arm and a blunt object are all you need."),
+    MetalPipe("Melee", 15, 0, "none", 0, "Totally metal, dude,"),
+    Broadsword("Melee", 30, 0, "none", 0, "It's the 19th century! What are you, a savage?!"),
     
-    public String getType() {
-        return type;
-    }
+    //Pistols
+    OldRevolver("Pistol", 20, 2, "PistolAmmo", 6, "Cowboy standard issue."),
+    NewRevolver("Pistol", 25, 2, "PistolAmmo", 6, "That's the actual product name. It's actually quite outdated."),
+    
+    //Shotguns
+    DoubleBarrelShotgun("Shotgun", 40, 1, "ShotgunAmmo", 2, "Two barrels are better than one."),
+    PumpShotgun("Shotgun", 30, 1, "ShotgunAmmo", 6, "Two barrels: One for the lead; One for the dead."),
+    
+    //Rifles
+    HuntingRifle("Rifle", 30, 3, "RifleAmmo", 8, "Great for protecting what's yours,");
+    
+    private final String type;
+    private final int power;
+    private final int range;
+    private final String ammoType;
+    private final int maxAmmo;
+    private final String description;
 
-    public void setType(String type) {
+    Weapons(String type, int power, int range, String ammoType, int maxAmmo, String description) {
         this.type = type;
-    }
-
-    public double getPower() {
-        return power;
-    }
-
-    public void setPower(double power) {
         this.power = power;
-    }
-
-    public double getAmmo() {
-        return ammo;
-    }
-
-    public void setAmmo(double ammo) {
-        this.ammo = ammo;
-    }
-
-    public String getAmmoType() {
-        return ammoType;
-    }
-
-    public void setAmmoType(String ammoType) {
+        this.range = range;
         this.ammoType = ammoType;
+        this.maxAmmo = maxAmmo;
+        this.description = description;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 19 * hash + Objects.hashCode(this.type);
-        hash = 19 * hash + (int) (Double.doubleToLongBits(this.power) ^ (Double.doubleToLongBits(this.power) >>> 32));
-        hash = 19 * hash + (int) (Double.doubleToLongBits(this.ammo) ^ (Double.doubleToLongBits(this.ammo) >>> 32));
-        hash = 19 * hash + Objects.hashCode(this.ammoType);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Weapons other = (Weapons) obj;
-        if (Double.doubleToLongBits(this.power) != Double.doubleToLongBits(other.power)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.ammo) != Double.doubleToLongBits(other.ammo)) {
-            return false;
-        }
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        if (!Objects.equals(this.ammoType, other.ammoType)) {
-            return false;
-        }
-        return true;
-    }
+    
+    
 
     @Override
     public String toString() {
-        return "weapons{" + "type=" + type + ", power=" + power + ", ammo=" + ammo + ", ammoType=" + ammoType + '}';
+        return "weapons{" + "type=" + type + ", power=" + power + ", ammoType=" + ammoType+  ", maxAmmo=" + maxAmmo + ", description" + description + '}';
     }
     
     
