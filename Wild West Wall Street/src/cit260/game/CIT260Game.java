@@ -16,7 +16,7 @@ import Classes.Character;
 import Classes.Game;
 import Classes.Item;
 import Classes.Map;
-import Classes.Product;
+//import Classes.Product;
 import Classes.Wagon;
 import citbyui.cit260.WWWS.view.StartProgramView;
 
@@ -59,19 +59,7 @@ public class CIT260Game {
     
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-    
 
-        
-        //Weapon - Pistol
-        Weapons pistol = new Weapons(); 
-       
-        pistol.setType("hand gun");
-        pistol.setPower(4);
-        pistol.setAmmo(6);
-        pistol.setAmmoType("45 slug");
-       
-        System.out.println(pistol.toString());
-       
         //Scene - Market
         Scene market = new Scene();
        
@@ -117,14 +105,7 @@ public class CIT260Game {
         
        
         
-        //Product
-        Product ironBar = new Product();
-        
-        ironBar.setValue(20);
-        ironBar.setNoInStock(32);
-        
-        System.out.println(ironBar.toString());
-        
+      
         //Wagon
         Wagon oldWagon = new Wagon();
         
