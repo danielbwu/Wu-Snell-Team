@@ -6,6 +6,7 @@
 package control;
 
 import Classes.Map;
+import Classes.Scene;
 
 /**
  *
@@ -13,12 +14,24 @@ import Classes.Map;
  */
 public class MapControl {
     public static Map createMap() {
-        Map map = null;
-        System.out.println("createMap called");
+        Map map = new Map(20, 20);
+       
+       // Scene[] scenes = createScenes();
+        
+        //GameControl.assignScenesToLocations(map,scenes);
+        
         return map;
     }
 
     static void moveActorsToStartingLocation(Map map) {
        System.out.println("moveActorsToStartingLocation called");
-    } 
-}
+    }
+    
+   // private static Scene[] createScenes(){
+    //    Scene[] scenes = new scene[SceneType.values().length];
+     //   return scenes;
+    }
+        
+    //}
+
+
