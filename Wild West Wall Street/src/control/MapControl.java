@@ -16,7 +16,7 @@ public class MapControl {
     public static Map createMap() {
         Map map = new Map(20, 20);
        
-       // Scene[] scenes = createScenes();
+       Scene[] scenes = createScenes();
         
         //GameControl.assignScenesToLocations(map,scenes);
         
@@ -27,11 +27,42 @@ public class MapControl {
        System.out.println("moveActorsToStartingLocation called");
     }
     
-   // private static Scene[] createScenes(){
-    //    Scene[] scenes = new scene[SceneType.values().length];
-     //   return scenes;
+    private static Scene[] createScenes(){
+       Scene[] scenes = new Scene[SceneType.values().length];
+       return scenes;
+    }
+    
+    public enum SceneType {
+        start,
+        bank,
+        store,
+        helpMenu,
+        battleMenu,
+        inventoryMenu,
+        map,
+        treasureChest,
+        wagon,
+        city1,
+        city2,
+        city3,
+        city4,
+        city5,
+        menu,
+        gmaeMenu,
+        buy,
+        sell,
+        pineWood,
+        rawIron,
+        water,
+        bread,
+        pistol,
+        rifle,
+        shotgun,
+        shotgunShells,
+        pistolAmmo,
+        rifleAmmo,
     }
         
-    //}
+    }
 
 
