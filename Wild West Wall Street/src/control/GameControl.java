@@ -53,13 +53,20 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
  
-    public ArrayList<Item> createInventoryList(){
+    public static Item[] createInventoryList(){
         
-        ArrayList<Item> inventory = new ArrayList<>();
+        Item[] inventory = new Item[10];
         
-        
+        //Item PineWood = new Item();
+        //inventory[Item.PineWood.ordinal()] = PineWood;
         
         return inventory;
+    }
+    
+    public static void displayInventory(ArrayList<Item> inventory){
+        for (Item item : inventory){
+            //System.out.println("\n\tItem: " + item.getName());
+        }
     }
     /*public static Item[] createInventoryList(){
         //arrayList of inventory Items
