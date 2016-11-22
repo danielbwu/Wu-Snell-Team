@@ -11,6 +11,7 @@ import Classes.Map;
 import Classes.Player;
 import Classes.Wagon;
 import cit260.game.CIT260Game;
+import java.util.ArrayList;
 
 /**
  *
@@ -52,7 +53,14 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
  
-    
+    public ArrayList<Item> createInventoryList(){
+        
+        ArrayList<Item> inventory = new ArrayList<>();
+        
+        
+        
+        return inventory;
+    }
     /*public static Item[] createInventoryList(){
         //arrayList of inventory Items
         Item[] inventory = new Item[11];
