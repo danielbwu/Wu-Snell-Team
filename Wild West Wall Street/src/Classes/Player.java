@@ -7,6 +7,7 @@ package Classes;
 
 import java.util.Objects;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Player implements Serializable{
     
     private String name;
     private double highScore;
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public Player() {
     }

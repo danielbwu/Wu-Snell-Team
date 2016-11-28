@@ -11,6 +11,7 @@ import Classes.Map;
 import Classes.Player;
 import Classes.Wagon;
 import cit260.game.CIT260Game;
+import java.util.ArrayList;
 
 /**
  *
@@ -53,7 +54,21 @@ public class GameControl {
     }
     
  
+    public static Item[] createInventoryList(){
+        
+        Item[] inventory = new Item[10];
+        
+        //Item PineWood = new Item();
+        //inventory[Item.PineWood.ordinal()] = PineWood;
+        
+        return inventory;
+    }
     
+    public static void displayInventory(ArrayList<Item> inventory){
+        for (Item item : inventory){
+            //System.out.println("\n\tItem: " + item.getName());
+        }
+    }
     /*public static Item[] createInventoryList(){
         //arrayList of inventory Items
         Item[] inventory = new Item[11];
