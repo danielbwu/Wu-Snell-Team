@@ -32,14 +32,14 @@ public class DisplayMap {
             for(int column = 1;column < locations[row].length; column++){
               System.out.println("-------------------------------------");
                 
-             // MapLocation location = locations[row][column];
-             // if(location.isVisited()){
-             // System.out.println(location.getScene().getDisplaySymbol());
-             // }
+              MapLocation location = locations[row][column];
+              if(location.isVisited()){
+              System.out.println(location.getScene().getDisplaySymbol());
+              }
                       
-             // else{
-             //     System.out.println ("??");
-             // }
+              else{
+                  System.out.println ("??");
+              }
     }
     
        }
