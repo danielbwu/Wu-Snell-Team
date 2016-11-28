@@ -15,7 +15,7 @@ import Classes.Scene;
  */
 public class MapControl {
     public static Map createMap() {
-        Map map = new Map(20, 20);
+        Map map = new Map(10,10);
        
        Scene[] scenes = createScenes();
         
@@ -186,8 +186,8 @@ public class MapControl {
 
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
         locations[0][1].setScene(scenes[SceneType.city1.ordinal()]);
-        locations[0][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[0][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.bank.ordinal()]);
+        locations[0][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[0][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][6].setScene(scenes[SceneType.desert.ordinal()]);

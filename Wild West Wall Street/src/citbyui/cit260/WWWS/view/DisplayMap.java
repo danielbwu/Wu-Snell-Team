@@ -27,19 +27,19 @@ public class DisplayMap {
         System.out.println("           Wild Wild West");
         System.out.println("   1  2  3  4  5  6  7  8  9  10\n"
                 + "-------------------------------------");
-       for(int row = 1;row< 11;row++){
+       for(int row = 1;row< locations.length;row++){
             System.out.println(row + "|  |  |  |  |  |  |  |  |  |  |");
-            for(int column = 1;column <2; column++){
+            for(int column = 1;column < locations[row].length; column++){
               System.out.println("-------------------------------------");
                 
-              MapLocation location = locations[row][column];
-              if(location.isVisited()){
-              System.out.println(location.getScene().getDisplaySymbol());
-              }
+             // MapLocation location = locations[row][column];
+             // if(location.isVisited()){
+             // System.out.println(location.getScene().getDisplaySymbol());
+             // }
                       
-              else{
-                  System.out.println ("??");
-              }
+             // else{
+             //     System.out.println ("??");
+             // }
     }
     
        }
