@@ -21,6 +21,7 @@ public GameMenuView() {
                     +"\n|  Game Menu                   |"
                     +"\n----------------------------------"
                     +"\nI - Inventory"
+                    +"\nM - Display Map"
                     +"\nB - Bank"
                     +"\nP - Progress (Shop Menu test)"
                     +"\nH - Help"
@@ -75,6 +76,9 @@ public GameMenuView() {
           case "I":
               this.seeInventory();
               break;
+         case "M":
+              this.displayMap();
+              break;
           case "B":
               this.seeBank();
               break;
@@ -96,6 +100,11 @@ public GameMenuView() {
         InventoryMenuView inventoryMenu = new InventoryMenuView();
         inventoryMenu.display();
     }
+    
+    private void displayMap() {
+       DisplayMap displayMap = new DisplayMap();
+       displayMap.displayMap();
+    }
 
     private void seeBank() {
         BankMenuView bankMenu = new BankMenuView();
@@ -114,6 +123,8 @@ public GameMenuView() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
+    
+    
 
     
 }

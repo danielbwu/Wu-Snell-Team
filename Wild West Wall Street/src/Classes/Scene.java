@@ -17,7 +17,7 @@ public class Scene implements Serializable {
     
     private String description;
     private double travelTime;
-    private Character displaySymbol;
+    public String displaySymbol;
     private Character trap;
 
     public Scene() {
@@ -39,11 +39,11 @@ public class Scene implements Serializable {
         this.travelTime = travelTime;
     }
 
-    public Character getDisplaySymbol() {
+    public String getDisplaySymbol() {
         return displaySymbol;
     }
 
-    public void setDisplaySymbol(Character displaySymbol) {
+    public void setDisplaySymbol(String displaySymbol) {
         this.displaySymbol = displaySymbol;
     }
 

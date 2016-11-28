@@ -14,9 +14,9 @@ import java.io.Serializable;
  */
 public class Map implements Serializable{
     
-    private int rowCount;
-    private int columnCount;
-    private MapLocation[][] locations;
+    public int rowCount;
+    public int columnCount;
+    public MapLocation[][] locations;
 
     public Map() {
     }
@@ -60,6 +60,16 @@ public class Map implements Serializable{
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
+
+    public MapLocation[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(MapLocation[][] locations) {
+        this.locations = locations;
+    }
+    
+    
 
     @Override
     public int hashCode() {
