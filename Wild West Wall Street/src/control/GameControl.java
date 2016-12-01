@@ -10,6 +10,7 @@ import Classes.Item;
 import Classes.Map;
 import Classes.Player;
 import Classes.Wagon;
+import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.util.ArrayList;
 
@@ -34,7 +35,7 @@ public class GameControl {
 
     }
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlException {
        
         Game game = new Game();
         CIT260Game.setCurrentGame(game);

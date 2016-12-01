@@ -28,18 +28,20 @@ public class DisplayMap {
         System.out.println("   1  2  3  4  5  6  7  8  9  10\n"
                 + "-------------------------------------");
        for(int row = 1;row< locations.length;row++){
-            System.out.println(row + "|  |  |  |  |  |  |  |  |  |  |");
-            for(int column = 1;column < locations[row].length; column++){
-              System.out.println("-------------------------------------");
+           System.out.println(row);
+            System.out.print("|  ");
+            for(int column = 0;column < locations[row].length; column++){
+              System.out.println("----------------------------");
                 
               MapLocation location = locations[row][column];
               if(location.isVisited()){
-              System.out.println(location.getScene().getDisplaySymbol());
+              System.out.print(location.getScene().getDisplaySymbol());
               }
                       
               else{
-                  System.out.println ("??");
+                  System.out.print ("??");
               }
+             
     }
     
        }

@@ -5,6 +5,8 @@
  */
 package control;
 
+import Classes.Weapons;
+
 /**
  *
  * @author Daniel
@@ -25,6 +27,7 @@ public class BattleControl {
         else
             return false;
     }
+
     
 /*    public double attackTarget(double targetHealth, double weaponDamage, int weaponRange, int targetDistance){
         

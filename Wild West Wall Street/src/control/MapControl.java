@@ -5,9 +5,13 @@
  */
 package control;
 
+import Classes.Actor;
 import Classes.Map;
 import Classes.MapLocation;
 import Classes.Scene;
+import Exceptions.MapControlException;
+import cit260.game.CIT260Game;
+import java.awt.Point;
 
 /**
  *
@@ -15,17 +19,37 @@ import Classes.Scene;
  */
 public class MapControl {
     public static Map createMap() {
-        Map map = new Map(10,10);
+        Map map = new Map(11,11);
        
-       Scene[] scenes = createScenes();
+       Scene[] scenes = MapControl.createScenes();
         
         MapControl.assignScenesToLocations(map,scenes);
         
         return map;
     }
 
-    public static void moveActorsToStartingLocation(Map map) {
-       System.out.println("moveActorsToStartingLocation called");
+    public static void moveActorsToStartingLocation(Map map) 
+            throws MapControlException {
+      Actor[] actors = Actor.values();
+      
+      for (Actor actor : actors) {
+          Point coordinates = actor.getCoordinates();
+          MapControl.moveActorsToLocation(actor, coordinates);
+
+          }
+          
+    }
+    public static int moveActorsToLocation(Actor actors, Point coordinates)
+                                throws MapControlException {
+        Map map = CIT260Game.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if(newRow< 0 || newRow >= map.getRowCount() || 
+                newColumn < 0 || newColumn >= map.getColumnCount()){
+            return -1;
+        }
+        return 0;
     }
     
     public static Scene[] createScenes(){
