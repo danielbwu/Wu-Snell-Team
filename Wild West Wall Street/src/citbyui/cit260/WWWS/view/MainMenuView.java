@@ -5,8 +5,11 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import control.GameControl;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -74,7 +77,13 @@ public MainMenuView() {
       
       switch(value){
           case "N":
+      {
+          try {
               this.startNewGame();
+          } catch (MapControlException ex) {
+              Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+          }
+      }
               break;
           case "L":
               this.startExistingGame();
@@ -93,7 +102,7 @@ public MainMenuView() {
       return false;
     }
 
-    private void startNewGame() {
+    private void startNewGame() throws MapControlException {
      GameControl.createNewGame(CIT260Game.getPlayer());
      
      GameMenuView gameMenu = new GameMenuView();

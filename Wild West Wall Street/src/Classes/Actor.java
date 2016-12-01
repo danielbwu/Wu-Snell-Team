@@ -16,7 +16,8 @@ import java.util.Objects;
 public class Actor implements Serializable{
 
     public static Actor[] values() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Actor[] values = null;
+      return values;
     }
     
     public Point location;

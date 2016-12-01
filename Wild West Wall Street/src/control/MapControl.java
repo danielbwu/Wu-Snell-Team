@@ -32,11 +32,11 @@ public class MapControl {
             throws MapControlException {
       Actor[] actors = Actor.values();
       
-      for (Actor actor : actors) {
-          Point coordinates = actor.getCoordinates();
-          MapControl.moveActorsToLocation(actor, coordinates);
+      //for (Actor actor : actors) {
+          //Point coordinates = actor.getCoordinates();
+        //  MapControl.moveActorsToLocation(actor, coordinates);
 
-          }
+          //}
           
     }
     public static int moveActorsToLocation(Actor actors, Point coordinates)
