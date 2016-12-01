@@ -5,31 +5,30 @@
  */
 package Exceptions;
 
-
- /* @author Daniel
+/**
+ *
+ * @author 1dani
  */
-public class MapControlException extends Exception {
+public class TreasureChestException extends Exception {
 
-    public MapControlException() {
+    public TreasureChestException() {
     }
 
-    public MapControlException(String message) {
+    public TreasureChestException(String message) {
         super(message);
     }
 
-    public MapControlException(String message, Throwable cause) {
+    public TreasureChestException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MapControlException(Throwable cause) {
+    public TreasureChestException(Throwable cause) {
         super(cause);
     }
 
-    public MapControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public TreasureChestException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
-
     
     
 }

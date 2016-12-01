@@ -18,6 +18,7 @@ public class Player implements Serializable{
     private String name;
     private double highScore;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private ArrayList<Item> wagonInventory = new ArrayList<>();
 
     public Player() {
     }
