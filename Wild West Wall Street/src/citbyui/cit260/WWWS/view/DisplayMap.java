@@ -5,8 +5,9 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import Classes.Location;
 import Classes.Map;
-import Classes.MapLocation;
+import Classes.Location;
 import cit260.game.CIT260Game;
 import control.MapControl;
 
@@ -22,18 +23,18 @@ public class DisplayMap {
     
     public void displayMap(){
         
-       MapLocation[][] locations = CIT260Game.getCurrentGame().getMap().getLocations();
+       Location[][] locations = CIT260Game.getCurrentGame().getMap().getLocations();
         
         System.out.println("           Wild Wild West");
         System.out.println("   1  2  3  4  5  6  7  8  9  10\n"
                 + "-------------------------------------");
-       for(int row = 1;row< locations.length;row++){
-           System.out.println(row);
+       for(int row = 0;row< locations.length;row++){
+           System.out.println(row + 1);
             System.out.print("|  ");
             for(int column = 0;column < locations[row].length; column++){
               System.out.println("----------------------------");
                 
-              MapLocation location = locations[row][column];
+              Location location = locations[row][column];
               if(location.isVisited()){
               System.out.print(location.getScene().getDisplaySymbol());
               }

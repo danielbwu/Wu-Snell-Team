@@ -7,8 +7,9 @@ package control;
 
 import Classes.Actor;
 import Classes.Map;
-import Classes.MapLocation;
+import Classes.Location;
 import Classes.Scene;
+import Classes.SceneType;
 import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.awt.Point;
@@ -19,7 +20,7 @@ import java.awt.Point;
  */
 public class MapControl {
     public static Map createMap() {
-        Map map = new Map(11,11);
+        Map map = new Map(10,10);
        
        Scene[] scenes = MapControl.createScenes();
         
@@ -32,9 +33,9 @@ public class MapControl {
             throws MapControlException {
       Actor[] actors = Actor.values();
       
-      //for (Actor actor : actors) {
-          //Point coordinates = actor.getCoordinates();
-        //  MapControl.moveActorsToLocation(actor, coordinates);
+     // for (Actor actor : actors) {
+       //   Point coordinates = actor.getCoordinates();
+         // MapControl.moveActorsToLocation(actor, coordinates);
 
           //}
           
@@ -184,28 +185,9 @@ public class MapControl {
        return scenes;
     }
     
-    public enum SceneType {
-        start,
-        bank,
-        store,
-        battle,
-        treasureChest,
-        city1,
-        city2,
-        city3,
-        city4,
-        city5,
-        pineWood,
-        rawIron,
-        water,
-        grain,
-        desert,
-        lake,
-        mountain;
-    }
     
     public static void assignScenesToLocations(Map map, Scene[] scenes){
-        MapLocation[][] locations = map.getLocations();
+        Location[][] locations = map.getLocations();
         
 
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
@@ -309,7 +291,6 @@ public class MapControl {
         locations[9][8].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][9].setScene(scenes[SceneType.desert.ordinal()]);
     }
-        
-    }
 
+}
 
