@@ -23,7 +23,7 @@ public class Location implements Serializable {
    
    
     Location(){
-        this.isVisited = false;
+        this.isVisited = true;
         //this.scene = SceneType.desert;
         this.character = "";
         this.coordinates = null;

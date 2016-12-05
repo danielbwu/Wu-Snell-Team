@@ -22,11 +22,11 @@ public class DisplayMap {
         Location[][] locations = CIT260Game.getCurrentGame().getMap().getLocations();
 
         System.out.println("           Wild Wild West");
-        System.out.println("   1  2  3  4  5  6  7  8  9  10\n"
-                + "-------------------------------------");
+        System.out.println("    1    2    3    4    5    6    7    8    9    10\n"
+                + "----------------------------------------------------");
         for (int row = 0; row < locations.length; row++) {
             System.out.print("\n" + (row + 1));
-            System.out.print("|  ");
+            System.out.print("| ");
             
             for (int column = 0; column < locations[row].length; column++) {
                 
@@ -38,7 +38,7 @@ public class DisplayMap {
                 }
                    System.out.print("|");
             }
-            System.out.print("\n" + "----------------------------------------");
+            System.out.print("\n" + "------------------------------------------------------");
         }
     }
 }

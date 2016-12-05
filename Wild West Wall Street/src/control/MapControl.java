@@ -71,7 +71,7 @@ public class MapControl {
         bankScene.setDescription(
                   "Welcome to the bank. Here you can Deposit or Withdraw"
                 + "your money. You can also pay back your loan.");
-        bankScene.setDisplaySymbol(" B ");
+        bankScene.setDisplaySymbol(" BA ");
         bankScene.setTravelTime(1000);
         scenes[SceneType.bank.ordinal()] = bankScene;
         
@@ -79,7 +79,7 @@ public class MapControl {
         storeScene.setDescription(
                   "Welcome to the bank. Here you can Deposit or Withdraw"
                 + "your money. You can also pay back your loan.");
-        storeScene.setDisplaySymbol(" S ");
+        storeScene.setDisplaySymbol(" ST ");
         storeScene.setTravelTime(1000);
         scenes[SceneType.store.ordinal()] = storeScene;
         
@@ -157,28 +157,28 @@ public class MapControl {
         Scene grainScene = new Scene();
         grainScene.setDescription(
                 "You found some grain! You can sell that for some profit!");
-        grainScene.setDisplaySymbol(" G ");
+        grainScene.setDisplaySymbol(" GR ");
         grainScene.setTravelTime(1000);
         scenes[SceneType.grain.ordinal()] = grainScene;
         
         Scene desertScene = new Scene();
         desertScene.setDescription(
                 "Desert, nuff said.");
-        desertScene.setDisplaySymbol(" D ");
+        desertScene.setDisplaySymbol(" DS ");
         desertScene.setTravelTime(1000);
         scenes[SceneType.desert.ordinal()] = desertScene;
         
         Scene lakeScene = new Scene();
         lakeScene.setDescription(
                 "Lake, nuff said.");
-        lakeScene.setDisplaySymbol(" L ");
+        lakeScene.setDisplaySymbol(" LA ");
         lakeScene.setTravelTime(1000);
         scenes[SceneType.lake.ordinal()] = lakeScene;
         
         Scene mountainScene = new Scene();
         mountainScene.setDescription(
                 "mountain, nuff said.");
-        mountainScene.setDisplaySymbol(" M ");
+        mountainScene.setDisplaySymbol(" MT ");
         mountainScene.setTravelTime(1000);
         scenes[SceneType.mountain.ordinal()] = mountainScene;
         
@@ -203,7 +203,7 @@ public class MapControl {
         locations[1][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[1][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[1][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[1][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][6].setScene(scenes[SceneType.desert.ordinal()]);
@@ -213,7 +213,7 @@ public class MapControl {
         locations[2][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[2][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[2][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[2][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[2][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[2][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[2][6].setScene(scenes[SceneType.desert.ordinal()]);
@@ -222,8 +222,8 @@ public class MapControl {
         locations[2][9].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.battle.ordinal()]);
+        locations[3][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[3][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][6].setScene(scenes[SceneType.desert.ordinal()]);
@@ -233,7 +233,7 @@ public class MapControl {
         locations[4][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[4][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[4][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[4][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][6].setScene(scenes[SceneType.desert.ordinal()]);
@@ -273,7 +273,7 @@ public class MapControl {
         locations[8][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[8][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[8][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[8][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[8][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[8][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[8][6].setScene(scenes[SceneType.desert.ordinal()]);
@@ -283,7 +283,7 @@ public class MapControl {
         locations[9][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[9][3].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[9][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][6].setScene(scenes[SceneType.desert.ordinal()]);
