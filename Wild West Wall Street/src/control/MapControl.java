@@ -31,15 +31,17 @@ public class MapControl {
 
     public static void moveActorsToStartingLocation(Map map) 
             throws MapControlException {
+    
       Actor[] actors = Actor.values();
       
-     // for (Actor actor : actors) {
-       //   Point coordinates = actor.getCoordinates();
-         // MapControl.moveActorsToLocation(actor, coordinates);
+   //   for (Actor actor : actors) {
+        //  Point coordinates = actor.getCoordinates();
+       //   MapControl.moveActorsToLocation(actor, coordinates);
 
-          //}
+         // }
           
     }
+    
     public static int moveActorsToLocation(Actor actors, Point coordinates)
                                 throws MapControlException {
         Map map = CIT260Game.getCurrentGame().getMap();
@@ -63,7 +65,7 @@ public class MapControl {
             + "they're are some dangerous parts around here, watch out"
             + "for the outlaws and bandits looking to steal from anyone."
             + "Head off and to the bank to get your start up loan and good luck!");
-        startingScene.setDisplaySymbol(" ST ");
+        startingScene.setDisplaySymbol(" GO ");
         startingScene.setTravelTime(100);
         scenes[SceneType.start.ordinal()] = startingScene;
         
@@ -194,98 +196,98 @@ public class MapControl {
         locations[0][1].setScene(scenes[SceneType.city1.ordinal()]);
         locations[0][2].setScene(scenes[SceneType.bank.ordinal()]);
         locations[0][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[0][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[0][5].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.mountain.ordinal()]);
+        locations[0][5].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[0][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][7].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][8].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][9].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][0].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[1][1].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.store.ordinal()]);
         locations[1][2].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[1][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[1][5].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.mountain.ordinal()]);
+        locations[1][5].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[1][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][7].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][8].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][9].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][0].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[2][0].setScene(scenes[SceneType.grain.ordinal()]);
         locations[2][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][2].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[2][2].setScene(scenes[SceneType.pineWood.ordinal()]);
         locations[2][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[2][4].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[2][4].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[2][5].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][6].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[2][8].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[2][6].setScene(scenes[SceneType.city2.ordinal()]);
+        locations[2][7].setScene(scenes[SceneType.bank.ordinal()]);
+        locations[2][8].setScene(scenes[SceneType.store.ordinal()]);
         locations[2][9].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][0].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][2].setScene(scenes[SceneType.battle.ordinal()]);
+        locations[3][1].setScene(scenes[SceneType.battle.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[3][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][5].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[3][4].setScene(scenes[SceneType.mountain.ordinal()]);
+        locations[3][5].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[3][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[3][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][8].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[3][9].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[3][8].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[3][9].setScene(scenes[SceneType.pineWood.ordinal()]);
         locations[4][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[4][2].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[4][2].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[4][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[4][4].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[4][4].setScene(scenes[SceneType.mountain.ordinal()]);
         locations[4][5].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[4][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[4][8].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[4][9].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[4][8].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[4][9].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[5][0].setScene(scenes[SceneType.store.ordinal()]);
+        locations[5][1].setScene(scenes[SceneType.city5.ordinal()]);
+        locations[5][2].setScene(scenes[SceneType.bank.ordinal()]);
+        locations[5][3].setScene(scenes[SceneType.battle.ordinal()]);
         locations[5][4].setScene(scenes[SceneType.desert.ordinal()]);
         locations[5][5].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][6].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[5][8].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[5][6].setScene(scenes[SceneType.water.ordinal()]);
+        locations[5][7].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[5][8].setScene(scenes[SceneType.store.ordinal()]);
         locations[5][9].setScene(scenes[SceneType.desert.ordinal()]);
         locations[6][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[6][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[6][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][3].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[6][3].setScene(scenes[SceneType.battle.ordinal()]);
         locations[6][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][5].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][6].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][8].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[6][9].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[6][5].setScene(scenes[SceneType.water.ordinal()]);
+        locations[6][6].setScene(scenes[SceneType.lake.ordinal()]);
+        locations[6][7].setScene(scenes[SceneType.lake.ordinal()]);
+        locations[6][8].setScene(scenes[SceneType.city3.ordinal()]);
+        locations[6][9].setScene(scenes[SceneType.bank.ordinal()]);
         locations[7][0].setScene(scenes[SceneType.desert.ordinal()]);
         locations[7][1].setScene(scenes[SceneType.desert.ordinal()]);
         locations[7][2].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][3].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][5].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][6].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[7][8].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[7][3].setScene(scenes[SceneType.battle.ordinal()]);
+        locations[7][4].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[7][5].setScene(scenes[SceneType.water.ordinal()]);
+        locations[7][6].setScene(scenes[SceneType.lake.ordinal()]);
+        locations[7][7].setScene(scenes[SceneType.lake.ordinal()]);
+        locations[7][8].setScene(scenes[SceneType.water.ordinal()]);
         locations[7][9].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][0].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][2].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[8][0].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[8][1].setScene(scenes[SceneType.store.ordinal()]);
+        locations[8][2].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[8][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[8][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][5].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][6].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][7].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[8][4].setScene(scenes[SceneType.mountain.ordinal()]);
+        locations[8][5].setScene(scenes[SceneType.rawIron.ordinal()]);
+        locations[8][6].setScene(scenes[SceneType.water.ordinal()]);
+        locations[8][7].setScene(scenes[SceneType.water.ordinal()]);
         locations[8][8].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[8][9].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][0].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][1].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][2].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[8][9].setScene(scenes[SceneType.pineWood.ordinal()]);
+        locations[9][0].setScene(scenes[SceneType.city4.ordinal()]);
+        locations[9][1].setScene(scenes[SceneType.bank.ordinal()]);
+        locations[9][2].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[9][3].setScene(scenes[SceneType.mountain.ordinal()]);
-        locations[9][4].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][5].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[9][4].setScene(scenes[SceneType.mountain.ordinal()]);
+        locations[9][5].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[9][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][7].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][8].setScene(scenes[SceneType.desert.ordinal()]);
