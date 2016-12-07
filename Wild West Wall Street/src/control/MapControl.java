@@ -34,15 +34,15 @@ public class MapControl {
     
       Actor[] actors = Actor.values();
       
-   //   for (Actor actor : actors) {
-        //  Point coordinates = actor.getCoordinates();
-       //   MapControl.moveActorsToLocation(actor, coordinates);
-
-         // }
+      for (Actor actor : actors) {
+          Point coordinates = actor.getCoordinates();
+           MapControl.moveActorToLocation(actor, coordinates);
+        
+          }
           
     }
     
-    public static int moveActorsToLocation(Actor actors, Point coordinates)
+    public static void moveActorToLocation(Actor actor, Point coordinates)
                                 throws MapControlException {
         Map map = CIT260Game.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -50,9 +50,10 @@ public class MapControl {
         
         if(newRow< 0 || newRow >= map.getRowCount() || 
                 newColumn < 0 || newColumn >= map.getColumnCount()){
-            return -1;
-        }
-        return 0;
+          throw new MapControlException ("Can not move actor to location"
+          + coordinates.x + "," + coordinates.y + "becasue that location is"
+                  + "outside the bounds of the map.");
+    }
     }
     
     public static Scene[] createScenes(){
