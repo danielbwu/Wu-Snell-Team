@@ -34,11 +34,11 @@ public class MapControl {
     
       Actor[] actors = Actor.values();
       
-      for (Actor actor : actors) {
-          Point coordinates = actor.getCoordinates();
-           MapControl.moveActorToLocation(actor, coordinates);
+     // for (Actor actor : actors) {
+       //   Point coordinates = actor.getCoordinates();
+         //  MapControl.moveActorToLocation(actor, coordinates);
         
-          }
+          //}
           
     }
     

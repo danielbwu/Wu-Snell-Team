@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import Exceptions.MapControlException;
 import java.util.Scanner;
 
 /**
@@ -26,7 +27,8 @@ public abstract class View implements ViewInterface {
     
     
     @Override
-    public void display() {
+    public void display()
+    {
         
         boolean done =false;
         do {
