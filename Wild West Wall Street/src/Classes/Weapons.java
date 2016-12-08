@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 
 /**
- *
+ * THIS CLASS IS UNUSED
  * @author Kameron/Daniel
  */
 public enum Weapons implements Serializable {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.io.Serializable;
 
 /**
- *
+ * THIS CLASS IS UNUSED
  * @author Daniel
  */
 public class Product implements Serializable{

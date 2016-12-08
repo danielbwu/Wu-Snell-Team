@@ -5,6 +5,9 @@
  */
 package control;
 
+import Classes.Item;
+import java.util.ArrayList;
+
 /**
  *
  * @author Daniel
@@ -16,5 +19,17 @@ public class InventoryControl {
         double total = numSold * price;
         
         return total;
+    }
+    
+    public ArrayList<Item> addItem(ArrayList<Item> inventory) {
+        
+        
+        return inventory;
+    }
+    
+    public ArrayList<Item> removeItem(ArrayList<Item> inventory) {
+        
+        
+        return inventory;
     }
 }

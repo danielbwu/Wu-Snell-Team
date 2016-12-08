@@ -54,7 +54,7 @@ public class CIT260Game {
         Player playerOne = new Player();
         
         playerOne.setName("Bill The Kid");
-        playerOne.setHighScore(4.00);
+        playerOne.setMoney(4.00);
     
     
         String playerInfo = playerOne.toString();

@@ -18,8 +18,11 @@ import java.io.Serializable;
  *
  * @author Daniel
  */
-public enum Item implements Serializable{
+public class Item implements Serializable{
+
     
+
+/*    
     PineWood("Sturdy planks cut from a pine tree. Useful as construction material."),
     RawIron("Raw iron ore. Useless to the average man. A blacksmith, however..."),
     RefinedIron("Strong, pruified metal. An invaluable resource for construction, tools, and crafts."),
@@ -41,5 +44,5 @@ public enum Item implements Serializable{
     public String toString() {
         return "Item{" + ", itemDescription=" + itemDescription + '}';
     }
-
+*/
 }

@@ -7,6 +7,7 @@ package Classes;
 
 import java.util.Objects;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Game implements Serializable{
     
     private Player player;
     private Wagon wagon;
-    private Item[] inventory;
+    private ArrayList<Item> inventory = new ArrayList<>();
     private Map map;
 
     public Game() {
@@ -49,11 +50,11 @@ public class Game implements Serializable{
         this.wagon = wagon;
     }
 
-    public Item[] getInventory() {
+    public ArrayList<Item> getInventory() {
         return inventory;
     }
 
-    public void setInventory(Item[] inventory) {
+    public void setInventory(ArrayList<Item> inventory) {
         this.inventory = inventory;
     }
 
