@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.WWWS.view;
 import Classes.Player;
+import Exceptions.MapControlException;
 import control.GameControl;
 import java.util.Scanner;
 /**
@@ -110,7 +111,6 @@ public class StartProgramView extends View{
                          +"\n We hope you enjoy!"
                          + "\n========================================");
        MainMenuView mainMenuView = new MainMenuView();
-              
        mainMenuView.display();
     }
 

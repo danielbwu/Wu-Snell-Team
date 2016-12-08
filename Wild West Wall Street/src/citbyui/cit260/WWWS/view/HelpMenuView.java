@@ -26,6 +26,7 @@ public HelpMenuView() {
                     +"\nC - Combat tutorial"
                     +"\nL - How loans work"
                     +"\nM - Moving"
+                    +"\nD - Map Symbols" 
                     +"\nT - Time"
                     +"\nQ - Quit"
                     +"\n----------------------------------"
@@ -88,6 +89,9 @@ public HelpMenuView() {
           case "M":
               this.movingHelpMenu();
               break;
+          case "D":
+              this.mapSymbols();
+              break;
           case "T":
               this.timeHelpMenu();
               break;
@@ -128,6 +132,16 @@ public HelpMenuView() {
                 + "\tA - West\n"
                 + "\tS - South\n"
                 + "\tD - East\n");
+    }
+    private void mapSymbols() {
+        System.out.println("Map Symbols:\n"
+                + "DS - Desert\n"
+                + "TC - Treasure Chest\n"
+                + "PW - Pine Wood\n"
+                + "RI - Raw Iron\n"
+                + "FW - Fresh Water\n"
+                + "LA - Lake\n"
+                + "MT - Mountain\n");
     }
     private void timeHelpMenu() {
         System.out.println("Game Time:"

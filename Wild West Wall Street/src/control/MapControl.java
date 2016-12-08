@@ -14,6 +14,7 @@ import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.awt.Point;
 
+
 /**
  *
  * @author Kameron
@@ -34,15 +35,15 @@ public class MapControl {
     
       Actor[] actors = Actor.values();
       
-   //   for (Actor actor : actors) {
-        //  Point coordinates = actor.getCoordinates();
-       //   MapControl.moveActorsToLocation(actor, coordinates);
-
-         // }
+     // for (Actor actor : actors) {
+       //   Point coordinates = actor.getCoordinates();
+         //  MapControl.moveActorToLocation(actor, coordinates);
+        
+          //a}
           
     }
     
-    public static int moveActorsToLocation(Actor actors, Point coordinates)
+    public static void moveActorToLocation(Actor actor, Point coordinates)
                                 throws MapControlException {
         Map map = CIT260Game.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -50,9 +51,10 @@ public class MapControl {
         
         if(newRow< 0 || newRow >= map.getRowCount() || 
                 newColumn < 0 || newColumn >= map.getColumnCount()){
-            return -1;
-        }
-        return 0;
+          throw new MapControlException ("Can not move actor to location"
+          + coordinates.x + "," + coordinates.y + "becasue that location is"
+                  + "outside the bounds of the map.");
+    }
     }
     
     public static Scene[] createScenes(){
@@ -79,8 +81,7 @@ public class MapControl {
         
         Scene storeScene = new Scene();
         storeScene.setDescription(
-                  "Welcome to the bank. Here you can Deposit or Withdraw"
-                + "your money. You can also pay back your loan.");
+                  "Welcome to the Store. Here you can buy goods and sell them");
         storeScene.setDisplaySymbol(" ST ");
         storeScene.setTravelTime(1000);
         scenes[SceneType.store.ordinal()] = storeScene;
@@ -200,9 +201,9 @@ public class MapControl {
         locations[0][5].setScene(scenes[SceneType.rawIron.ordinal()]);
         locations[0][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[0][7].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[0][8].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[0][8].setScene(scenes[SceneType.treasureChest.ordinal()]);
         locations[0][9].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[1][0].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.treasureChest.ordinal()]);
         locations[1][1].setScene(scenes[SceneType.store.ordinal()]);
         locations[1][2].setScene(scenes[SceneType.desert.ordinal()]);
         locations[1][3].setScene(scenes[SceneType.mountain.ordinal()]);
@@ -291,7 +292,7 @@ public class MapControl {
         locations[9][6].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][7].setScene(scenes[SceneType.desert.ordinal()]);
         locations[9][8].setScene(scenes[SceneType.desert.ordinal()]);
-        locations[9][9].setScene(scenes[SceneType.desert.ordinal()]);
+        locations[9][9].setScene(scenes[SceneType.treasureChest.ordinal()]);
     }
 
 }

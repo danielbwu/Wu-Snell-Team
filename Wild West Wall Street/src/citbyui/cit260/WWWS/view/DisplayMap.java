@@ -27,7 +27,7 @@ public class DisplayMap {
         
         
         for (int row = 0; row < locations.length; row++) {
-                  
+            
             System.out.print("\n" + (row + 1));
             System.out.print("| ");
             
