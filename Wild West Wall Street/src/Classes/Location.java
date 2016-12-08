@@ -8,6 +8,7 @@ package Classes;
 import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,12 +20,14 @@ public class Location implements Serializable {
     private  Point coordinates;
     private Scene scene;
     private boolean isVisited;
-    private String character;
-   
+//    private String character;
+    private ArrayList<Item> shop = new ArrayList();
+    private boolean isShop;
+    private boolean canTravel;
    
     Location(){
         this.isVisited = false;
-        this.character = "";
+//        this.character = "";
         this.coordinates = null;
         this.description = "";
     }
@@ -49,11 +52,11 @@ public class Location implements Serializable {
     public boolean isVisited() {
         return isVisited;
     }
-
+/*
     public String getCharacter() {
         return character;
     }
-
+*/
     public void setScene(Scene scene) {
         this.scene = scene;
     }
@@ -61,11 +64,11 @@ public class Location implements Serializable {
     public void setIsVisited(boolean isVisited) {
         this.isVisited = isVisited;
     }
-
+/*
     public void setCharacter(String character) {
         this.character = character;
     }
-
+*/
     public void setDescription(String description) {
         this.description = description;
     }

@@ -18,13 +18,13 @@ public class GameMenuView {
 public GameMenuView() {
         this.menu = "\n"
                     +"\n----------------------------------"
-                    +"\n|  Game Menu                   |"
+                    +"\n|    Game Menu                   |"
                     +"\n----------------------------------"
-                    +"\nI - Inventory"
-                    +"\nM - Display Map"
-                    +"\nB - Bank"
-                    +"\nP - Progress (Shop Menu test)"
-                    +"\nH - Help"
+                    +"\nI - Inventory                 N"
+                    +"\nM - Display Map               ^"
+                    +"\nB - Bank                   W< + >E"
+                    +"\nP - Shop                      V"
+                    +"\nH - Help                      S"
                     +"\nQ - Quit"
                     +"\n----------------------------------";
         
@@ -83,10 +83,22 @@ public GameMenuView() {
               this.seeBank();
               break;
           case "P":
-              this.seeProgress();
+              this.openShop();
               break;
           case "H":
               this.helpMenu();
+              break;
+          case "W":
+              this.moveNorth();
+              break;
+          case "A":
+              this.moveWest();
+              break;
+          case "S":
+              this.moveSouth();
+              break;
+          case "D":
+              this.moveEast();
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -112,7 +124,7 @@ public GameMenuView() {
        
     }
     
-    private void seeProgress() {
+    private void openShop() {
        // System.out.println("dipslay current progress in game");
        ShopMenuView shopMenu = new ShopMenuView();
        shopMenu.display();
@@ -124,7 +136,21 @@ public GameMenuView() {
         helpMenu.display();
     }
     
+    private void moveNorth() {
+        System.out.println("moveNorth() called");
+    }
     
+    private void moveSouth() {
+        System.out.println("moveSouth() called");
+    }
+    
+    private void moveEast() {
+        System.out.println("moveEast() called");
+    }
+    
+    private void moveWest() {
+        System.out.println("moveWest() called");
+    }
 
     
 }
