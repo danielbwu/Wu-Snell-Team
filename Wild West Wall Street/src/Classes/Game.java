@@ -18,7 +18,7 @@ public class Game implements Serializable{
     private double totalTime;
     
     private Player player;
-    private Wagon wagon;
+//    private Wagon wagon;
     private ArrayList<Item> inventory = new ArrayList<>();
     private Map map;
 
@@ -41,7 +41,7 @@ public class Game implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
+/*    
     public Wagon getWagon() {
         return wagon;
     }
@@ -49,7 +49,7 @@ public class Game implements Serializable{
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
     }
-
+*/
     public ArrayList<Item> getInventory() {
         return inventory;
     }

@@ -17,7 +17,7 @@ public class Player implements Serializable{
     
     private String name;
     private double money;
- //   private Location[][] location;
+    private ArrayList<Item> inventory = new ArrayList<>();
 
     public Player() {
     }

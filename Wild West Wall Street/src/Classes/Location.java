@@ -101,6 +101,10 @@ public class Location implements Serializable {
         this.canTravel = canTravel;
     }
     
+    public ArrayList<Item> createStore() {
+        
+        ArrayList<Item> store = new 
+    }
     
 }
     
