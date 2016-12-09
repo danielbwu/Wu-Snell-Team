@@ -5,9 +5,9 @@
  */
 package control;
 
-import Classes.Actor;
 import Classes.Map;
 import Classes.Location;
+import Classes.Player;
 import Classes.Scene;
 import Classes.SceneType;
 import Exceptions.MapControlException;
@@ -29,21 +29,24 @@ public class MapControl {
         
         return map;
     }
-
+public static void setLocation( Player player, Point coordinates){
+    
+    
+}
     public static void moveActorsToStartingLocation(Map map) 
             throws MapControlException {
     
-      Actor[] actors = Actor.values();
+  
       
      // for (Actor actor : actors) {
        //   Point coordinates = actor.getCoordinates();
          //  MapControl.moveActorToLocation(actor, coordinates);
         
-          //a}
+          //}
           
     }
     
-    public static void moveActorToLocation(Actor actor, Point coordinates)
+   /* public static void moveActorToLocation(Actor actor, Point coordinates)
                                 throws MapControlException {
         Map map = CIT260Game.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -56,7 +59,7 @@ public class MapControl {
                   + "outside the bounds of the map.");
     }
     }
-    
+    */
     public static Scene[] createScenes(){
        Scene[] scenes = new Scene[SceneType.values().length];
        

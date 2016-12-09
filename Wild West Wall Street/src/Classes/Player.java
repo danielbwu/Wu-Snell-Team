@@ -5,6 +5,7 @@
  */
 package Classes;
 
+import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,10 +18,28 @@ public class Player implements Serializable{
     
     private String name;
     private double highScore;
+    private Point location;
     private ArrayList<Item> inventory = new ArrayList<>();
+    
 //No longe used    private ArrayList<Item> wagonInventory = new ArrayList<>();
 
-    public Player() {
+   public Player() {
+        
+    }
+    
+    public Player(String name,double highScore, Point location) {
+        this.name = "";
+        this.highScore = 3000;
+        this.location = new Point(0,0);
+        this.inventory = new ArrayList<Item>(); 
+        Item pineWood = new  Wood ;
+    }
+    private Point getLocation() {
+        return location;
+    }
+
+    private void setLocation(Point location) {
+        this.location = location;
     }
     
     public String getName() {

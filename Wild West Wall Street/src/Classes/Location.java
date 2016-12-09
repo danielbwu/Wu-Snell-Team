@@ -26,7 +26,7 @@ public class Location implements Serializable {
     private boolean canTravel;
    
     Location(){
-        this.isVisited = false;
+        this.isVisited = true;
 //        this.character = "";
         this.coordinates = null;
         this.description = "";
