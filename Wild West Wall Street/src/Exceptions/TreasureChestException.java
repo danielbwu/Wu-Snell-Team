@@ -9,13 +9,23 @@ package Exceptions;
  *
  * @author 1dani
  */
-public class TreasureChestException extends Exception {
+public class TreasureChestException extends Exception{
 
+    private String errorMessage;
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+    
     public TreasureChestException() {
     }
 
     public TreasureChestException(String message) {
-        super(message);
+        this.errorMessage = message;
     }
 
     public TreasureChestException(String message, Throwable cause) {

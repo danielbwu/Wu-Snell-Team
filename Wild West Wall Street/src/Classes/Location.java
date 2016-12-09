@@ -103,7 +103,18 @@ public class Location implements Serializable {
     
     public ArrayList<Item> createStore() {
         
-        ArrayList<Item> store = new 
+        ArrayList<Item> store = new ArrayList<>();
+        
+        Wood wood = new Wood("Pine Wood", 12.00, 10);
+        store.add(wood);
+        
+        Iron iron = new Iron("Raw Iron", 25.00, 10);
+        store.add(iron);
+        
+        Water water = new Water("Fresh Water", 10.00, 10);
+        store.add(water);
+        
+        return store;
     }
     
 }

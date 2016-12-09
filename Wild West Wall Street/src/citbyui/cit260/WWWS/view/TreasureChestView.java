@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import Exceptions.TreasureChestException;
 import control.TreasureChest;
 import java.util.Scanner;
 
@@ -86,8 +87,12 @@ public class TreasureChestView extends View {
         double height = Double.parseDouble(strHeight);
         double diameter = Double.parseDouble(strDiameter);
         
+        try {
         volume = TreasureChest.calcVolumeOfCone(height, diameter);
-
+        } catch(TreasureChestException ex)
+        {
+            System.out.println(ex.getErrorMessage());
+        }
         if (volume < 0) {
             System.out.println("\nError. Volume cannot be less than 1. Please try again");
             return false;
