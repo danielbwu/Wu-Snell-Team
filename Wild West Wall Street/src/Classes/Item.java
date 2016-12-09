@@ -18,8 +18,22 @@ import java.io.Serializable;
  *
  * @author Daniel
  */
-public enum Item implements Serializable{
+public class Item implements Serializable{
+
+    private String name;
+    private double price;
+    private int quantity;
+
+    public Item(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
     
+    
+    
+
+/*    
     PineWood("Sturdy planks cut from a pine tree. Useful as construction material."),
     RawIron("Raw iron ore. Useless to the average man. A blacksmith, however..."),
     RefinedIron("Strong, pruified metal. An invaluable resource for construction, tools, and crafts."),
@@ -41,5 +55,29 @@ public enum Item implements Serializable{
     public String toString() {
         return "Item{" + ", itemDescription=" + itemDescription + '}';
     }
+*/
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }

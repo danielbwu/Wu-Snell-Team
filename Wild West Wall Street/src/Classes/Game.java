@@ -5,8 +5,10 @@
  */
 package Classes;
 
+import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,11 +19,12 @@ public class Game implements Serializable{
     private double totalTime;
     
     private Player player;
-    private Wagon wagon;
-    private Item[] inventory;
+//    private Wagon wagon;
+    private ArrayList<Item> inventory = new ArrayList<>();
     private Map map;
 
     public Game() {
+       this.player = new Player("Billy", 3000,new Point(0,0));
     }
     
 
@@ -40,7 +43,7 @@ public class Game implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
+/*    
     public Wagon getWagon() {
         return wagon;
     }
@@ -48,12 +51,12 @@ public class Game implements Serializable{
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
     }
-
-    public Item[] getInventory() {
+*/
+    public ArrayList<Item> getInventory() {
         return inventory;
     }
 
-    public void setInventory(Item[] inventory) {
+    public void setInventory(ArrayList<Item> inventory) {
         this.inventory = inventory;
     }
 

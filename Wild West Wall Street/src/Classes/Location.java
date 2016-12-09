@@ -21,7 +21,7 @@ public class Location implements Serializable {
     private Scene scene;
     private boolean isVisited;
 //    private String character;
-    private ArrayList<Item> shop = new ArrayList();
+    private ArrayList<Item> shop = new ArrayList<>();
     private boolean isShop;
     private boolean canTravel;
    
@@ -76,7 +76,32 @@ public class Location implements Serializable {
     public void setCoordinates(Point coordinates) {
         this.coordinates = coordinates;
     }
+
+    public ArrayList<Item> getShop() {
+        return shop;
+    }
+
+    public void setShop(ArrayList<Item> shop) {
+        this.shop = shop;
+    }
+
+    public boolean isIsShop() {
+        return isShop;
+    }
+
+    public void setIsShop(boolean isShop) {
+        this.isShop = isShop;
+    }
+
+    public boolean isCanTravel() {
+        return canTravel;
+    }
+
+    public void setCanTravel(boolean canTravel) {
+        this.canTravel = canTravel;
+    }
     
+
     
 }
     
