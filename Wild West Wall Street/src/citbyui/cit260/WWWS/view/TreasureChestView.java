@@ -80,7 +80,7 @@ public class TreasureChestView extends View {
 @Override
     public boolean doAction(String strHeight) {
 
-        double volume;
+        double volume = 0;
         this.promptMessage =  "\nPlease enter the diameter: ";
         String strDiameter = this.getInput();
         

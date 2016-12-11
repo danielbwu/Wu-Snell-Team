@@ -46,7 +46,7 @@ public class GameControl {
        // game.setInventory(invetoryList);
         
         Wagon wagon = new Wagon();
-        game.setWagon(wagon);
+        
         
         Map map = MapControl.createMap();
         game.setMap(map);
