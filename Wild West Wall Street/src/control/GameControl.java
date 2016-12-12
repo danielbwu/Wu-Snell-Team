@@ -9,7 +9,6 @@ import Classes.Game;
 import Classes.Item;
 import Classes.Map;
 import Classes.Player;
-import Classes.Wagon;
 import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.util.ArrayList;
@@ -45,8 +44,8 @@ public class GameControl {
        // Item[] invetoryList = GameControl.createInventoryList();
        // game.setInventory(invetoryList);
         
-        Wagon wagon = new Wagon();
-        game.setWagon(wagon);
+//        Wagon wagon = new Wagon();
+//        game.setWagon(wagon);
         
         Map map = MapControl.createMap();
         game.setMap(map);

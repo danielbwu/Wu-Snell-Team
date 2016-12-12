@@ -32,4 +32,13 @@ public class InventoryControl {
         
         return inventory;
     }
+    
+    public void displayInventory(ArrayList<Item> inventory) {
+        
+        for (Item item : inventory){
+            System.out.println("\n\t" + item.getName() + " -- " + item.getQuantity());
+        
+        return;
+        }
+    }
 }
