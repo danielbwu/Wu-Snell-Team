@@ -54,6 +54,12 @@ public class Player implements Serializable{
         return inventory;
     }
     
-    
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
     
 }
