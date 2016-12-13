@@ -27,6 +27,10 @@ public class GameControl {
         
         Player player = new Player();
         player.setName(name);
+        player.setMoney(1000.00);
+        
+        InventoryControl createInventory = new InventoryControl();
+        player.setInventory(createInventory.createInventory());
         
         CIT260Game.setPlayer(player);
         
@@ -53,87 +57,4 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
     
- 
-    public static Item[] createInventoryList(){
-        
-        Item[] inventory = new Item[10];
-        
-        //Item PineWood = new Item();
-        //inventory[Item.PineWood.ordinal()] = PineWood;
-        
-        return inventory;
-    }
-    
-    public static void displayInventory(ArrayList<Item> inventory){
-        for (Item item : inventory){
-            //System.out.println("\n\tItem: " + item.getName());
-        }
-    }
-    /*public static Item[] createInventoryList(){
-        //arrayList of inventory Items
-        Item[] inventory = new Item[11];
-        
-        Item pineWood = new Item();
-        pineWood.setItemDescription("Pine Wood");
-        pineWood.setNoInStock(0);
-        inventory[0] = pineWood;
-        
-        Item rawIron = new Item();
-        rawIron.setItemDescription("Raw Iron");
-        rawIron.setNoInStock(0);
-        inventory[1] = rawIron;
-        
-        Item leather = new Item();
-        leather.setItemDescription("Leather");
-        leather.setNoInStock(0);
-        inventory[2] = leather;
-        
-        Item water = new Item();
-        water.setItemDescription("Jug of Water");
-        water.setNoInStock(0);
-        inventory[3] = water;
-        
-        Item flour = new Item();
-        flour.setItemDescription("Just flour");
-        flour.setNoInStock(0);
-        inventory[4] = flour;
-        
-        Item rifle = new Item();
-        rifle.setItemDescription("Winchester Long Rifle");
-        rifle.setNoInStock(0);
-        inventory[5] = rifle;
-        
-        Item pistol = new Item();
-        pistol.setItemDescription("Colt 45");
-        pistol.setNoInStock(0);
-        inventory[6] = pistol;
-        
-        Item shotgun = new Item();
-        shotgun.setItemDescription("Double barrel shotgun");
-        shotgun.setNoInStock(0);
-        inventory[7] = shotgun;
-        
-        Item wagonParts = new Item();
-        wagonParts.setItemDescription("Parts to fix your wagon");
-        wagonParts.setNoInStock(0);
-        inventory[8] = wagonParts;
-        
-        Item pistolAmmo = new Item();
-        pistolAmmo.setItemDescription("Colt 45 ammo");
-        pistolAmmo.setNoInStock(0);
-        inventory[9] = pistolAmmo;
-        
-        Item rifleAmmo = new Item();
-        rifleAmmo.setItemDescription("Winchester ammo");
-        rifleAmmo.setNoInStock(0);
-        inventory[10] = rifleAmmo;
-        
-        Item shotgunAmmo = new Item();
-        shotgunAmmo.setItemDescription("Shotgun Ammo");
-        shotgunAmmo.setNoInStock(0);
-        inventory[11] = shotgunAmmo;
-        
-        return inventory;
-           
-}*/
 }

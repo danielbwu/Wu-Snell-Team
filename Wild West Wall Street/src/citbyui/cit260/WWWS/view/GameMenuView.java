@@ -113,7 +113,7 @@ public GameMenuView() {
 
     private void seeInventory() {
         InventoryControl seeInventory = new InventoryControl();
-        seeInventory.displayInventory(CIT260Game.getCurrentGame().getPlayer().getInventory());
+        seeInventory.displayInventory(CIT260Game.getCurrentGame().getPlayer().getInventory(), CIT260Game.getCurrentGame().getPlayer().getMoney());
     }
     
     private void displayMap() {

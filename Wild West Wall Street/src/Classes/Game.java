@@ -49,7 +49,7 @@ public class Game implements Serializable{
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
     }
-*/
+
     public ArrayList<Item> getInventory() {
         return inventory;
     }
@@ -57,7 +57,7 @@ public class Game implements Serializable{
     public void setInventory(ArrayList<Item> inventory) {
         this.inventory = inventory;
     }
-
+*/
     public Map getMap() {
         return map;
     }

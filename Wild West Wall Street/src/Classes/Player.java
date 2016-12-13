@@ -37,23 +37,7 @@ public class Player implements Serializable{
     public void setMoney(double money) {
         this.money = money;
     }
-
-    public ArrayList<Item> createInventory() {
-        
-        ArrayList<Item> inventory = new ArrayList<>();
-        
-        Wood wood = new Wood("Pine Wood", 0.00, 0);
-        inventory.add(wood);
-        
-        Iron iron = new Iron("Raw Iron", 0.00, 0);
-        inventory.add(iron);
-        
-        Water water = new Water("Fresh Water", 0.00, 0);
-        inventory.add(water);
-        
-        return inventory;
-    }
-    
+   
     public ArrayList<Item> getInventory() {
         return inventory;
     }
