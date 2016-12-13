@@ -109,7 +109,7 @@ public class StartProgramView extends View{
         System.out.println("\n========================================="
                          +"\n Welcome to the game " + player.getName()
                          +"\n We hope you enjoy!"
-                         + "\n========================================");
+                         + "\n=========================================");
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }

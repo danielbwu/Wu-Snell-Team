@@ -81,10 +81,6 @@ public GameMenuView() {
          case "M":
               this.displayMap();
               break;
-/*          case "B":
-              this.seeBank();
-              break;
-*/
           case "P":
               this.openShop();
               break;
@@ -120,13 +116,7 @@ public GameMenuView() {
        DisplayMap displayMap = new DisplayMap();
        displayMap.displayMap();
     }
-/*
-    private void seeBank() {
-        BankMenuView bankMenu = new BankMenuView();
-        bankMenu.display();
-       
-    }
-*/    
+   
     private void openShop() {
        // System.out.println("dipslay current progress in game");
        ShopMenuView shopMenu = new ShopMenuView();

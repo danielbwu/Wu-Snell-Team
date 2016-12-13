@@ -37,24 +37,19 @@ public class GameControl {
         return player;
 
     }
+    
 
     public static void createNewGame(Player player) throws MapControlException {
        
         Game game = new Game();
-        CIT260Game.setCurrentGame(game);
-        
         game.setPlayer(player);
-       
-       // Item[] invetoryList = GameControl.createInventoryList();
-       // game.setInventory(invetoryList);
-        
-//        Wagon wagon = new Wagon();
-//        game.setWagon(wagon);
         
         Map map = MapControl.createMap();
         game.setMap(map);
         
         MapControl.moveActorsToStartingLocation(map);
+        
+        CIT260Game.setCurrentGame(game);
     }
     
 }
