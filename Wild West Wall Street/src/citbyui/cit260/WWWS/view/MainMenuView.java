@@ -34,43 +34,6 @@ public MainMenuView() {
         
     }
 
-   
-
- /* public void displayMainMenuView() {
-       
-      boolean done = false;
-      do {
-          String menuOption =this.getMenuOption();
-          if (menuOption.toUpperCase().equals("Q"))
-              return;
-          
-          done = this.doAction(menuOption);
-          
-      }while(!done);
-    }*/
-
-   /* private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid){
-            System.out.println("\n" + this.promptMessage +this.menu);
-           
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-           
-            if(value.length() <1) {
-                System.out.println("\nInvalid vaule: value can not be blank");
-                continue;    
-                
-            }
-            break;
-       
-        }
-        return value;
-    }*/
 @Override
     public boolean doAction(String value) {
       value = value.toUpperCase();

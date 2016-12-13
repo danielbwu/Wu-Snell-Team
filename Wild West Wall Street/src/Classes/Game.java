@@ -41,22 +41,6 @@ public class Game implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-/*    
-    public Wagon getWagon() {
-        return wagon;
-    }
-
-    public void setWagon(Wagon wagon) {
-        this.wagon = wagon;
-    }
-*/
-    public ArrayList<Item> getInventory() {
-        return inventory;
-    }
-
-    public void setInventory(ArrayList<Item> inventory) {
-        this.inventory = inventory;
-    }
 
     public Map getMap() {
         return map;

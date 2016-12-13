@@ -5,6 +5,9 @@
  */
 package citbyui.cit260.WWWS.view;
 
+import control.InventoryControl;
+import Classes.Player;
+import cit260.game.CIT260Game;
 import java.util.Scanner;
 import Classes.Player;
 
@@ -21,6 +24,7 @@ public GameMenuView() {
                     +"\n----------------------------------"
                     +"\n|    Game Menu                   |"
                     +"\n----------------------------------"
+
                     +"\nI - Inventory                 "
                     +"\nD - Display Map                "
                     + "\nM - Move                        "
@@ -84,9 +88,6 @@ public GameMenuView() {
          case "M":
               this.movePlayer();
               break;
-          case "B":
-              this.seeBank();
-              break;
           case "P":
               this.openShop();
               break;
@@ -102,21 +103,15 @@ public GameMenuView() {
     }
 
     private void seeInventory() {
-        InventoryMenuView inventoryMenu = new InventoryMenuView();
-        inventoryMenu.display();
+        InventoryControl seeInventory = new InventoryControl();
+        seeInventory.displayInventory(CIT260Game.getCurrentGame().getPlayer().getInventory(), CIT260Game.getCurrentGame().getPlayer().getMoney());
     }
     
     private void displayMap() {
        DisplayMap displayMap = new DisplayMap();
        displayMap.displayMap();
     }
-
-    private void seeBank() {
-        BankMenuView bankMenu = new BankMenuView();
-        bankMenu.display();
-       
-    }
-    
+   
     private void openShop() {
        // System.out.println("dipslay current progress in game");
        ShopMenuView shopMenu = new ShopMenuView();
