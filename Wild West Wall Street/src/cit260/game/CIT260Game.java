@@ -7,17 +7,17 @@
 package cit260.game;
 
 import Classes.Player;
-import Classes.BankScene;
-import Classes.BattleScene;
+//import Classes.BankScene;
+//import Classes.BattleScene;
 import Classes.Location;
 import Classes.Scene;
-import Classes.Weapons;
-import Classes.Character;
+//import Classes.Weapons;
+//import Classes.Character;
 import Classes.Game;
 import Classes.Item;
 import Classes.Map;
 //import Classes.Product;
-import Classes.Wagon;
+//import Classes.Wagon;
 import citbyui.cit260.WWWS.view.StartProgramView;
 
 /**
@@ -42,7 +42,7 @@ public class CIT260Game {
         CIT260Game.player = player;
     }
     
-    private static Game currentGame =null;
+    private static Game currentGame = null;
     private static Player player = null;
 
     /**
@@ -68,8 +68,8 @@ public class CIT260Game {
        
         System.out.println(market.toString());
        
-        //BankScene
-        BankScene bank = new BankScene();
+        //BankScene *****UNUSED*****
+/*        BankScene bank = new BankScene();
        
         bank.setDeposit(100);
         bank.setWithdraw(65);
@@ -85,7 +85,7 @@ public class CIT260Game {
         battle.setTypeOfEnemies("outlaws");
        
         System.out.println(battle.toString());
-               
+*/               
 
         
         //Game
@@ -106,8 +106,8 @@ public class CIT260Game {
        
         
       
-        //Wagon
-        Wagon oldWagon = new Wagon();
+        //Wagon *****UNUSED*****
+/*        Wagon oldWagon = new Wagon();
         
         oldWagon.setSpeed(10);
         oldWagon.setHealth(50);
@@ -115,7 +115,7 @@ public class CIT260Game {
         oldWagon.setCurrentCapacity(23);
         
         System.out.println(oldWagon.toString());
-        
+*/        
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
        
