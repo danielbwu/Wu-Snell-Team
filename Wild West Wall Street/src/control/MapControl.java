@@ -13,185 +13,191 @@ import Classes.SceneType;
 import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.awt.Point;
-
+import Classes.Character;
 
 /**
  *
  * @author Kameron
  */
 public class MapControl {
+
     public static Map createMap() {
-        Map map = new Map(10,10);
-       
-       Scene[] scenes = MapControl.createScenes();
-        
-        MapControl.assignScenesToLocations(map,scenes);
-        
+        Map map = new Map(10, 10);
+
+        Scene[] scenes = MapControl.createScenes();
+
+        MapControl.assignScenesToLocations(map, scenes);
+
         return map;
     }
-    
-    public static void moveActorsToStartingLocation(Map map) 
+
+    public static void movePlayersToStartingLocation(Map map)
             throws MapControlException {
-    
-  
-      
-     // for (Actor actor : actors) {
-       //   Point coordinates = actor.getCoordinates();
-         //  MapControl.moveActorToLocation(actor, coordinates);
-        
-          //}
-          
+
     }
-    
-   /* public static void moveActorToLocation(Actor actor, Point coordinates)
-                                throws MapControlException {
+
+    public static void movePlayerToLocation(Character character, Point coordinates)
+            throws MapControlException {
         Map map = CIT260Game.getCurrentGame().getMap();
-        int newRow = coordinates.x-1;
-        int newColumn = coordinates.y-1;
-        
-        if(newRow< 0 || newRow >= map.getRowCount() || 
-                newColumn < 0 || newColumn >= map.getColumnCount()){
-          throw new MapControlException ("Can not move actor to location"
-          + coordinates.x + "," + coordinates.y + "becasue that location is"
-                  + "outside the bounds of the map.");
+        int newRow = coordinates.x - 1;
+        int newColumn = coordinates.y - 1;
+
+        if (newRow < 0 || newRow >= map.getRowCount()
+                || newColumn < 0 || newColumn >= map.getColumnCount()) {
+            throw new MapControlException("Can not move actor to location"
+                    + coordinates.x + "," + coordinates.y + "becasue that location is"
+                    + "outside the bounds of the map.");
+        }
+        //get oldloc
+        Point oldCoordinates = character.getLocation();
+        Location[][] locations = CIT260Game.getCurrentGame().getMap().getLocations();
+        Location oldLoc = locations[oldCoordinates.x][oldCoordinates.y];
+        //get newloc
+        Location newLoc = locations[newRow][newColumn];
+        //set character in oldloc to null
+        oldLoc.setActor(null);
+        //set character in newlock to character being moved
+        newLoc.setActor(character);
+        //set isvisited in newloc to true
+        newLoc.setIsVisited(true);
+        //set location in character to coordinates of newloc
+        character.getLocation().x = newRow;
+        character.getLocation().y = newColumn;
     }
-    }
-    */
-    public static Scene[] createScenes(){
-       Scene[] scenes = new Scene[SceneType.values().length];
-       
-       Scene startingScene = new Scene();
-       startingScene.setDescription(
-              "So you wanna make some money? You came to the right place. The"
-            + "wild west is the place to do it. Be careful though, "
-            + "they're are some dangerous parts around here, watch out"
-            + "for the outlaws and bandits looking to steal from anyone."
-            + "Head off and to the bank to get your start up loan and good luck!");
+
+    public static Scene[] createScenes() {
+        Scene[] scenes = new Scene[SceneType.values().length];
+
+        Scene startingScene = new Scene();
+        startingScene.setDescription(
+                "So you wanna make some money? You came to the right place. The"
+                + "wild west is the place to do it. Be careful though, "
+                + "they're are some dangerous parts around here, watch out"
+                + "for the outlaws and bandits looking to steal from anyone."
+                + "Head off and to the bank to get your start up loan and good luck!");
         startingScene.setDisplaySymbol(" GO ");
         startingScene.setTravelTime(100);
         scenes[SceneType.start.ordinal()] = startingScene;
-        
-         Scene bankScene = new Scene();
+
+        Scene bankScene = new Scene();
         bankScene.setDescription(
-                  "Welcome to the bank. Here you can Deposit or Withdraw"
+                "Welcome to the bank. Here you can Deposit or Withdraw"
                 + "your money. You can also pay back your loan.");
         bankScene.setDisplaySymbol(" BA ");
         bankScene.setTravelTime(1000);
         scenes[SceneType.bank.ordinal()] = bankScene;
-        
+
         Scene storeScene = new Scene();
         storeScene.setDescription(
-                  "Welcome to the Store. Here you can buy goods and sell them");
+                "Welcome to the Store. Here you can buy goods and sell them");
         storeScene.setDisplaySymbol(" ST ");
         storeScene.setTravelTime(1000);
         scenes[SceneType.store.ordinal()] = storeScene;
-        
+
         Scene battleScene = new Scene();
         battleScene.setDescription(
-                  "Watch out!!! You are getting robbed, what do you want to do?");
+                "Watch out!!! You are getting robbed, what do you want to do?");
         battleScene.setDisplaySymbol(" BS ");
         battleScene.setTravelTime(1000);
         scenes[SceneType.battle.ordinal()] = battleScene;
-        
+
         Scene treasureChestScene = new Scene();
         treasureChestScene.setDescription(
-                 "Luck is on your side!! You have found a lost treasure chest"
-               + "but it is locked!!! Figure out the passcode and the loot is yours!!!");
+                "Luck is on your side!! You have found a lost treasure chest"
+                + "but it is locked!!! Figure out the passcode and the loot is yours!!!");
         treasureChestScene.setDisplaySymbol(" TC ");
         treasureChestScene.setTravelTime(1000);
         scenes[SceneType.treasureChest.ordinal()] = treasureChestScene;
-        
+
         Scene city1Scene = new Scene();
         city1Scene.setDescription(
                 "Welcome to city1!");
         city1Scene.setDisplaySymbol(" C1 ");
         city1Scene.setTravelTime(1000);
         scenes[SceneType.city1.ordinal()] = city1Scene;
-        
+
         Scene city2Scene = new Scene();
         city2Scene.setDescription(
                 "Welcome to city2!");
         city2Scene.setDisplaySymbol(" C2 ");
         city2Scene.setTravelTime(1000);
         scenes[SceneType.city2.ordinal()] = city2Scene;
-        
+
         Scene city3Scene = new Scene();
         city3Scene.setDescription(
                 "Welcome to city3!");
         city3Scene.setDisplaySymbol(" C3 ");
         city3Scene.setTravelTime(1000);
         scenes[SceneType.city3.ordinal()] = city3Scene;
-        
+
         Scene city4Scene = new Scene();
         city1Scene.setDescription(
                 "Welcome to city4!");
         city4Scene.setDisplaySymbol(" C4 ");
         city4Scene.setTravelTime(1000);
         scenes[SceneType.city4.ordinal()] = city4Scene;
-        
+
         Scene city5Scene = new Scene();
         city5Scene.setDescription(
                 "Welcome to city5!");
         city5Scene.setDisplaySymbol(" C5 ");
         city5Scene.setTravelTime(1000);
         scenes[SceneType.city5.ordinal()] = city5Scene;
-        
+
         Scene pineWoodScene = new Scene();
         pineWoodScene.setDescription(
                 "You found some pine wood! You can sell that for some profit!");
         pineWoodScene.setDisplaySymbol(" PW ");
         pineWoodScene.setTravelTime(1000);
         scenes[SceneType.pineWood.ordinal()] = pineWoodScene;
-        
+
         Scene rawIronScene = new Scene();
         rawIronScene.setDescription(
                 "You found some raw iron! You can sell that for some profit!");
         rawIronScene.setDisplaySymbol(" RI ");
         rawIronScene.setTravelTime(1000);
         scenes[SceneType.rawIron.ordinal()] = rawIronScene;
-        
+
         Scene waterScene = new Scene();
         waterScene.setDescription(
                 "You found a jug of fresh water! You can sell that for some profit!");
         waterScene.setDisplaySymbol(" FW ");
         waterScene.setTravelTime(1000);
         scenes[SceneType.water.ordinal()] = waterScene;
-        
+
         Scene grainScene = new Scene();
         grainScene.setDescription(
                 "You found some grain! You can sell that for some profit!");
         grainScene.setDisplaySymbol(" GR ");
         grainScene.setTravelTime(1000);
         scenes[SceneType.grain.ordinal()] = grainScene;
-        
+
         Scene desertScene = new Scene();
         desertScene.setDescription(
                 "Desert, nuff said.");
         desertScene.setDisplaySymbol(" DS ");
         desertScene.setTravelTime(1000);
         scenes[SceneType.desert.ordinal()] = desertScene;
-        
+
         Scene lakeScene = new Scene();
         lakeScene.setDescription(
                 "Lake, nuff said.");
         lakeScene.setDisplaySymbol(" LA ");
         lakeScene.setTravelTime(1000);
         scenes[SceneType.lake.ordinal()] = lakeScene;
-        
+
         Scene mountainScene = new Scene();
         mountainScene.setDescription(
                 "mountain, nuff said.");
         mountainScene.setDisplaySymbol(" MT ");
         mountainScene.setTravelTime(1000);
         scenes[SceneType.mountain.ordinal()] = mountainScene;
-        
-       return scenes;
+
+        return scenes;
     }
-    
-    
-    public static void assignScenesToLocations(Map map, Scene[] scenes){
+
+    public static void assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
-        
 
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
         locations[0][1].setScene(scenes[SceneType.city1.ordinal()]);
@@ -296,4 +302,3 @@ public class MapControl {
     }
 
 }
-

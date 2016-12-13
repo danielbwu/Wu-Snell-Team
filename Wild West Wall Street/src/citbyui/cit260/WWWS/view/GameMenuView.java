@@ -82,7 +82,7 @@ public GameMenuView() {
               this.displayMap();
               break;
          case "M":
-              this.setLocation();
+              this.movePlayer();
               break;
           case "B":
               this.seeBank();
@@ -130,9 +130,10 @@ public GameMenuView() {
     }
     
 
-    private void setLocation() {
-     Player player = new Player();
-     player.getLocation();
+    private void movePlayer(){
+    MovePlayerView movePlayerView = new MovePlayerView();
+    movePlayerView.display();
+    
     }
 
     

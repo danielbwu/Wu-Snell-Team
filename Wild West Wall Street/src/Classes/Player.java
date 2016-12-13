@@ -9,16 +9,22 @@ import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Scanner;
+import Classes.Character;
 
 /**
  *
  * @author Kameron
  */
 public class Player implements Serializable{
-    
+
+  
     private String name;
+    private Character character;
     private double money;
     private Point location;
+    public int x;
+    public int y;
     private ArrayList<Item> inventory = new ArrayList<>();
     
     
@@ -40,14 +46,24 @@ public class Player implements Serializable{
         
         
     }
+    
+  
     public Point getLocation() {
-         System.out.println("Please enter coordinates: ");
         return location;
     }
 
     public void setLocation(Point location) {
-        this.location = location;
+     this.location = location;
     }
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
 
     public String getName() {
         return name;
