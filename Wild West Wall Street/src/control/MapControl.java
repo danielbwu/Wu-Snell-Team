@@ -29,7 +29,10 @@ public class MapControl {
         
         return map;
     }
-
+public static void setLocation( Player player, Point coordinates){
+    
+    
+}
     public static void moveActorsToStartingLocation(Map map) 
             throws MapControlException {
     
