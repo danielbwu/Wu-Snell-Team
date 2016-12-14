@@ -61,7 +61,7 @@ public class InventoryControl {
         System.out.println("Current Balance: $" + money + "\n");
         System.out.println("Items:");
         for (Item item : inventory){
-            System.out.println("| " + item.getName() + " -- " + item.getQuantity());
+            System.out.println(item.getName() + " -- " + item.getQuantity());
         
         }
 

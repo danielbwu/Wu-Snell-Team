@@ -86,8 +86,11 @@ public MainMenuView() {
     }
 
     private void saveGame() {
+        System.out.println("saveGame called");
+/*
         BattleIntroView battleMenu = new BattleIntroView();
         battleMenu.display();
+*/
     }
     
 }
