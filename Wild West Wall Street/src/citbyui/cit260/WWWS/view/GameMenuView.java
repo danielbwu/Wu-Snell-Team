@@ -27,7 +27,7 @@ public GameMenuView() {
 
                     +"\nI - Inventory                 "
                     +"\nD - Display Map                "
-                    + "\nM - Move                        "
+                    +"\nM - Move                        "
                     +"\nB - Bank                         "
                     +"\nP - Shop                         " 
                     +"\nH - Help                          " 
