@@ -45,13 +45,6 @@ public class GameControl {
         Game game = new Game();
         game.setPlayer(player);
         
-       
-       // Item[] invetoryList = GameControl.createInventoryList();
-       // game.setInventory(invetoryList);
-        
-       // Wagon wagon = new Wagon();
-        
-        
         Map map = MapControl.createMap();
         game.setMap(map);
         

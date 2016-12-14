@@ -40,6 +40,24 @@ public class InventoryControl {
         return inventory;
     }
     
+    public ArrayList<Item> createStore(double woodPrice, int woodStock, 
+                                       double ironPrice, int ironStock, 
+                                       double waterPrice, int waterStock) {
+        
+        ArrayList<Item> store = new ArrayList<>();
+        
+        Wood wood = new Wood("Pine Wood", woodPrice, woodStock);
+        store.add(wood);
+        
+        Iron iron = new Iron("Raw Iron", ironPrice, ironStock);
+        store.add(iron);
+        
+        Water water = new Water("Fresh Water", waterPrice, waterStock);
+        store.add(water);
+        
+        return store;
+    }
+    
     public ArrayList<Item> addItem(ArrayList<Item> inventory, Item item) {
         
         

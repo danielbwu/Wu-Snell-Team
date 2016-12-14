@@ -20,19 +20,17 @@ public class GameMenuView {
     private String promptMessage;
     
 public GameMenuView() {
-        this.menu = "\n"
-                    +"\n----------------------------------"
-                    +"\n|    Game Menu                   |"
-                    +"\n----------------------------------"
-
-                    +"\nI - Inventory                 "
-                    +"\nD - Display Map                "
-                    +"\nM - Move                        "
-                    +"\nB - Bank                         "
-                    +"\nP - Shop                         " 
-                    +"\nH - Help                          " 
-                    +"\nQ - Quit"
-                    +"\n----------------------------------";
+        this.menu = "\n----------------------------------"
+                  + "\n|    Game Menu                   |"
+                  + "\n----------------------------------"
+                  + "\nI - Inventory                 "
+                  + "\nD - Display Map                "
+                  + "\nM - Move                        "
+                  + "\nB - Bank                         "
+                  + "\nP - Shop                         " 
+                  + "\nH - Help                          " 
+                  + "\nQ - Quit"
+                  + "\n----------------------------------";
         
          this.promptMessage = "\nPlease select an option: ";
     }

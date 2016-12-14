@@ -93,6 +93,7 @@ public class StartProgramView extends View{
            return false;
         }
         
+        //Creates Player
         Player player = GameControl.createPlayer(playersName);
     
         if (player == null) {
@@ -106,6 +107,8 @@ public class StartProgramView extends View{
     }
 
     private void displayNextView(Player player) {
+        
+        //Welcome Message
         System.out.println("\n========================================="
                          +"\n Welcome to the game " + player.getName()
                          +"\n We hope you enjoy!"

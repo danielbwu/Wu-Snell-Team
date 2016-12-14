@@ -52,14 +52,13 @@ public class MapControl {
         Point oldCoordinates = character.getLocation();
         Location[][] locations = CIT260Game.getCurrentGame().getMap().getLocations();
         Location oldLoc = locations[oldCoordinates.x][oldCoordinates.y];
+
         //get newloc
         Location newLoc = locations[newRow][newColumn];
-        //set character in oldloc to null
-        oldLoc.setActor(null);
-        //set character in newlock to character being moved
-        newLoc.setActor(character);
+
         //set isvisited in newloc to true
         newLoc.setIsVisited(true);
+
         //set location in character to coordinates of newloc
         character.getLocation().x = newRow;
         character.getLocation().y = newColumn;
@@ -68,6 +67,7 @@ public class MapControl {
     public static Scene[] createScenes() {
         Scene[] scenes = new Scene[SceneType.values().length];
 
+        //Starting scene
         Scene startingScene = new Scene();
         startingScene.setDescription(
                 "So you wanna make some money? You came to the right place. The"
@@ -79,6 +79,7 @@ public class MapControl {
         startingScene.setTravelTime(100);
         scenes[SceneType.start.ordinal()] = startingScene;
 
+        //Bank scene
         Scene bankScene = new Scene();
         bankScene.setDescription(
                 "Welcome to the bank. Here you can Deposit or Withdraw"
@@ -87,6 +88,7 @@ public class MapControl {
         bankScene.setTravelTime(1000);
         scenes[SceneType.bank.ordinal()] = bankScene;
 
+        //Store scene
         Scene storeScene = new Scene();
         storeScene.setDescription(
                 "Welcome to the Store. Here you can buy goods and sell them");
@@ -94,6 +96,7 @@ public class MapControl {
         storeScene.setTravelTime(1000);
         scenes[SceneType.store.ordinal()] = storeScene;
 
+        //Battle scene
         Scene battleScene = new Scene();
         battleScene.setDescription(
                 "Watch out!!! You are getting robbed, what do you want to do?");
@@ -101,6 +104,7 @@ public class MapControl {
         battleScene.setTravelTime(1000);
         scenes[SceneType.battle.ordinal()] = battleScene;
 
+        //Treasure chest scene
         Scene treasureChestScene = new Scene();
         treasureChestScene.setDescription(
                 "Luck is on your side!! You have found a lost treasure chest"
@@ -109,6 +113,7 @@ public class MapControl {
         treasureChestScene.setTravelTime(1000);
         scenes[SceneType.treasureChest.ordinal()] = treasureChestScene;
 
+        //City 1
         Scene city1Scene = new Scene();
         city1Scene.setDescription(
                 "Welcome to city1!");
@@ -116,6 +121,7 @@ public class MapControl {
         city1Scene.setTravelTime(1000);
         scenes[SceneType.city1.ordinal()] = city1Scene;
 
+        //City 2
         Scene city2Scene = new Scene();
         city2Scene.setDescription(
                 "Welcome to city2!");
@@ -123,6 +129,7 @@ public class MapControl {
         city2Scene.setTravelTime(1000);
         scenes[SceneType.city2.ordinal()] = city2Scene;
 
+        //City 3
         Scene city3Scene = new Scene();
         city3Scene.setDescription(
                 "Welcome to city3!");
@@ -130,6 +137,7 @@ public class MapControl {
         city3Scene.setTravelTime(1000);
         scenes[SceneType.city3.ordinal()] = city3Scene;
 
+        //City 4
         Scene city4Scene = new Scene();
         city1Scene.setDescription(
                 "Welcome to city4!");
@@ -137,6 +145,7 @@ public class MapControl {
         city4Scene.setTravelTime(1000);
         scenes[SceneType.city4.ordinal()] = city4Scene;
 
+        //City 5
         Scene city5Scene = new Scene();
         city5Scene.setDescription(
                 "Welcome to city5!");
@@ -172,6 +181,7 @@ public class MapControl {
         grainScene.setTravelTime(1000);
         scenes[SceneType.grain.ordinal()] = grainScene;
 
+        //Desert
         Scene desertScene = new Scene();
         desertScene.setDescription(
                 "Desert, nuff said.");
@@ -179,6 +189,7 @@ public class MapControl {
         desertScene.setTravelTime(1000);
         scenes[SceneType.desert.ordinal()] = desertScene;
 
+        //Lake
         Scene lakeScene = new Scene();
         lakeScene.setDescription(
                 "Lake, nuff said.");
@@ -186,6 +197,7 @@ public class MapControl {
         lakeScene.setTravelTime(1000);
         scenes[SceneType.lake.ordinal()] = lakeScene;
 
+        //Mountain
         Scene mountainScene = new Scene();
         mountainScene.setDescription(
                 "mountain, nuff said.");
