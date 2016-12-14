@@ -5,6 +5,7 @@
  */
 package Classes;
 
+import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class Game implements Serializable{
     private Map map;
 
     public Game() {
+       this.player = new Player("Billy", 3000,new Point(0,0));
     }
     
 
@@ -40,6 +42,22 @@ public class Game implements Serializable{
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+/*    
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+*/
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
     }
 
     public Map getMap() {

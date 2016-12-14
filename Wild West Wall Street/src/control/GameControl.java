@@ -12,6 +12,7 @@ import Classes.Player;
 import Exceptions.MapControlException;
 import cit260.game.CIT260Game;
 import java.util.ArrayList;
+import Classes.Character;
 
 /**
  *
@@ -44,10 +45,17 @@ public class GameControl {
         Game game = new Game();
         game.setPlayer(player);
         
+       
+       // Item[] invetoryList = GameControl.createInventoryList();
+       // game.setInventory(invetoryList);
+        
+       // Wagon wagon = new Wagon();
+        
+        
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.moveActorsToStartingLocation(map);
+        //MapControl.moveActorsToStartingLocation(map);
         
         CIT260Game.setCurrentGame(game);
     }

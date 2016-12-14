@@ -9,6 +9,7 @@ import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.ArrayList;
+import Classes.Character;
 
 /**
  *
@@ -23,6 +24,7 @@ public class Location implements Serializable {
     private ArrayList<Item> shop = new ArrayList<>();
     private boolean isShop;
     private boolean canTravel;
+    private Character actor;
    
     Location(){
         this.isVisited = false;
@@ -45,6 +47,14 @@ public class Location implements Serializable {
 
    public Scene getScene() {
         return scene;
+    }
+
+    public Character getActor() {
+        return actor;
+    }
+
+    public void setActor(Character actor) {
+        this.actor = actor;
     }
 
     public boolean isVisited() {

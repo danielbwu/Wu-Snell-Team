@@ -20,7 +20,9 @@ public enum Character implements Serializable{
         CalamityJane("Long time legend, knows a ton about the wild west and guide you to help you become successful"),
         Bandit("will rob you blind"),
         StoreClerk("sell you goods"),
-        BankClerk("handle your banking needs");
+        BankClerk("handle your banking needs"),
+        Player("This is you");
+        
         
 
     private final Point location;

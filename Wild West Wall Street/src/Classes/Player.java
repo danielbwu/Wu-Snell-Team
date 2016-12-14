@@ -5,9 +5,12 @@
  */
 package Classes;
 
+import java.awt.Point;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Scanner;
+import Classes.Character;
 
 /**
  *
@@ -17,11 +20,53 @@ public class Player implements Serializable{
     
     private String name;
     private double money;
+    private Point location;
+    private Character character;
     private ArrayList<Item> inventory = new ArrayList<>();
 
-    public Player() {
+    
+
+
+
+
+   public Player() {
+        
     }
     
+    public Player(String name,double money, Point location) {
+        this.name = "";
+        this.money = 3000;
+        this.location = new Point(0,0);
+        this.inventory = new ArrayList<Item>(); 
+        Item pineWood = new  Wood("Pine Wood",10,0);
+        Item rawIron = new Iron("Raw Iron", 20, 0);
+        Item jugOfWater = new Water("Jug of Water", 5, 0);
+        
+        inventory.add(pineWood);
+        inventory.add(rawIron);
+        inventory.add(jugOfWater);
+        
+    }
+    private Point getLocation() {
+        return location;
+    }
+
+    private void setLocation(Point location) {
+        this.location = location;
+    }
+
+    
+ 
+
+    public Character getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+
+
     public String getName() {
         return name;
     }
