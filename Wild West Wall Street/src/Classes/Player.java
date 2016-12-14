@@ -21,6 +21,7 @@ public class Player implements Serializable{
     private String name;
     private double money;
     private Point location;
+    private Character character;
     private ArrayList<Item> inventory = new ArrayList<>();
 
     
@@ -53,28 +54,9 @@ public class Player implements Serializable{
     private void setLocation(Point location) {
         this.location = location;
     }
-    
-    public Player(String name,double highScore, Point location) {
-        this.name = "";
-        this.money = 3000;
-        this.location = new Point(0,0);
-        this.inventory = new ArrayList<>(); 
-        
-        Item Wood = new Item("Pine Wood",12.0,0);
-        Item Water = new Item("Jug of Water",10.0,0);
-        Item Iron = new Item ("Raw Iron", 25.0, 0);
-        
-        
-    }
-    
-  
-    public Point getLocation() {
-        return location;
-    }
 
-    public void setLocation(Point location) {
-     this.location = location;
-    }
+    
+ 
 
     public Character getCharacter() {
         return character;
