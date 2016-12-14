@@ -9,6 +9,7 @@ import control.InventoryControl;
 import Classes.Player;
 import cit260.game.CIT260Game;
 import java.util.Scanner;
+import Classes.Player;
 
 /**
  *
@@ -23,10 +24,13 @@ public GameMenuView() {
                     +"\n----------------------------------"
                     +"\n|    Game Menu                   |"
                     +"\n----------------------------------"
-                    +"\nI - Inventory"
-                    +"\nM - Display Map"
-                    +"\nP - Shop"
-                    +"\nH - Help"
+
+                    +"\nI - Inventory                 "
+                    +"\nD - Display Map                "
+                    +"\nM - Move                        "
+                    +"\nB - Bank                         "
+                    +"\nP - Shop                         " 
+                    +"\nH - Help                          " 
                     +"\nQ - Quit"
                     +"\n----------------------------------";
         
@@ -78,26 +82,17 @@ public GameMenuView() {
           case "I":
               this.seeInventory();
               break;
-         case "M":
+         case "D":
               this.displayMap();
+              break;
+         case "M":
+              this.movePlayer();
               break;
           case "P":
               this.openShop();
               break;
           case "H":
               this.helpMenu();
-              break;
-          case "W":
-              this.moveNorth();
-              break;
-          case "A":
-              this.moveWest();
-              break;
-          case "S":
-              this.moveSouth();
-              break;
-          case "D":
-              this.moveEast();
               break;
           default:
               System.out.println("\n*** Invalid selection *** Try again");
@@ -129,20 +124,11 @@ public GameMenuView() {
         helpMenu.display();
     }
     
-    private void moveNorth() {
-        System.out.println("moveNorth() called");
-    }
+
+    private void movePlayer(){
+    MovePlayerView movePlayerView = new MovePlayerView();
+    movePlayerView.display();
     
-    private void moveSouth() {
-        System.out.println("moveSouth() called");
-    }
-    
-    private void moveEast() {
-        System.out.println("moveEast() called");
-    }
-    
-    private void moveWest() {
-        System.out.println("moveWest() called");
     }
 
     
