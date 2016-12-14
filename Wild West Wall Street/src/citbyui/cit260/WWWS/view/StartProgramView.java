@@ -93,25 +93,25 @@ public class StartProgramView extends View{
            return false;
         }
         
-    Player player = GameControl.createPlayer(playersName);
+        Player player = GameControl.createPlayer(playersName);
     
-    if (player == null) {
-        System.out.println("\nError creating the player.");
-        return false;
-    }
+        if (player == null) {
+            System.out.println("\nError creating the player.");
+            return false;
+        }
     
-    this.displayNextView(player);
+        this.displayNextView(player);
      
-    return true;
+        return true;
     }
 
     private void displayNextView(Player player) {
-       System.out.println("\n========================================="
+        System.out.println("\n========================================="
                          +"\n Welcome to the game " + player.getName()
                          +"\n We hope you enjoy!"
-                         + "\n========================================");
-       MainMenuView mainMenuView = new MainMenuView();
-       mainMenuView.display();
+                         + "\n=========================================");
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
     }
 
 }

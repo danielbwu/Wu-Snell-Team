@@ -67,9 +67,13 @@ public class Player implements Serializable{
     public void setMoney(double money) {
         this.money = money;
     }
+   
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
 
-    
-    
-    
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
     
 }
