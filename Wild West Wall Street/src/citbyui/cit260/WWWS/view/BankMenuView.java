@@ -7,6 +7,7 @@ package citbyui.cit260.WWWS.view;
 
 import cit260.game.CIT260Game;
 import control.GameControl;
+import static control.LoanSort.loanSort;
 import java.util.Scanner;
 
 
@@ -98,8 +99,14 @@ public BankMenuView() {
     }
 
     private void getLoan() {
-     System.out.println("displays loan options");
+          //bank options
+        int[] loan1 = {1000,200,500,4000,444};  
+        int[] arr2 = loanSort(loan1);
+        for(int i:arr2){
+            System.out.print(i);
+            System.out.print(", ");
        
+    }
     }
     private void getBalances() {
         System.out.println("Displays balance is savings and how much money left on loan");

@@ -86,6 +86,9 @@ public GameMenuView() {
          case "M":
               this.movePlayer();
               break;
+         case "B":
+              this.bankMenu();
+              break;
           case "P":
               this.openShop();
               break;
@@ -120,6 +123,10 @@ public GameMenuView() {
     private void helpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
+    }
+        private void bankMenu() {
+        BankMenuView bankMenu = new BankMenuView();
+        bankMenu.display();
     }
     
 

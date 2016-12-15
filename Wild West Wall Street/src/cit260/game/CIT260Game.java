@@ -14,6 +14,7 @@ import Classes.Item;
 import Classes.Map;
 import citbyui.cit260.WWWS.view.StartProgramView;
 import control.InventoryControl;
+import static control.LoanSort.loanSort;
 
 /**
  *
@@ -72,8 +73,13 @@ public class CIT260Game {
 
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+        
+
+
        
     }
     
    
 }
+
+        
