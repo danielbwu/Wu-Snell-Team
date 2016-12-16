@@ -23,12 +23,11 @@ public GameMenuView() {
         this.menu = "\n----------------------------------"
                   + "\n|    Game Menu                   |"
                   + "\n----------------------------------"
-                  + "\nI - Inventory                 "
-                  + "\nD - Display Map                "
-                  + "\nM - Move                        "
-                  + "\nB - Bank                         "
-                  + "\nP - Shop                         " 
-                  + "\nH - Help                          " 
+                  + "\nI - Inventory"
+                  + "\nD - Display Map"
+                  + "\nM - Move"
+                  + "\nP - Shop" 
+                  + "\nH - Help" 
                   + "\nQ - Quit"
                   + "\n----------------------------------";
         
@@ -86,9 +85,6 @@ public GameMenuView() {
          case "M":
               this.movePlayer();
               break;
-         case "B":
-              this.bankMenu();
-              break;
           case "P":
               this.openShop();
               break;
@@ -124,11 +120,6 @@ public GameMenuView() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
-        private void bankMenu() {
-        BankMenuView bankMenu = new BankMenuView();
-        bankMenu.display();
-    }
-    
 
     private void movePlayer(){
     MovePlayerView movePlayerView = new MovePlayerView();
@@ -136,7 +127,6 @@ public GameMenuView() {
     
     }
 
-    
 }
 
     

@@ -23,8 +23,6 @@ public HelpMenuView() {
                     +"\n| Help Menu                     |"
                     +"\n----------------------------------"
                     +"\nG - Goal of the game"
-                    +"\nC - Combat tutorial"
-                    +"\nL - How loans work"
                     +"\nM - Moving"
                     +"\nD - Map Symbols" 
                     +"\nT - Time"
@@ -35,43 +33,6 @@ public HelpMenuView() {
          
     }
 
-   
-
-  /*public void displayHelpMenuView() {
-       
-      boolean done = false;
-      do {
-          String helpMenuOption =this.getHelpMenuOption();
-          if (helpMenuOption.toUpperCase().equals("Q"))
-              return;
-          
-          done = this.doAction(helpMenuOption);
-          
-      }while(!done);
-    }
-
-    private String getHelpMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-        
-        while (!valid){
-            System.out.println("\n" + this.promptMessage +this.menu);
-           
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-           
-            if(value.length() <1) {
-                System.out.println("\nInvalid vaule: value can not be blank");
-                continue;    
-                
-            }
-            break;
-       
-        }
-        return value;
-    }*/
 @Override
     public boolean doAction(String choice) {
       choice = choice.toUpperCase();
@@ -79,12 +40,6 @@ public HelpMenuView() {
       switch(choice){
           case "G":
               this.goalGame();
-              break;
-          case "C":
-              this.combatTutorial();
-              break;
-          case "L":
-              this.loanHelpMenu();
               break;
           case "M":
               this.movingHelpMenu();
@@ -128,10 +83,8 @@ public HelpMenuView() {
 
     private void movingHelpMenu() {
         System.out.println("Movement Controls:\n"
-                + "\tW - North\n"
-                + "\tA - West\n"
-                + "\tS - South\n"
-                + "\tD - East\n");
+                + "From the movement menu, enter the map coordinates"
+                + "in the format <y,x>");
     }
     private void mapSymbols() {
         System.out.println("Map Symbols:\n"
