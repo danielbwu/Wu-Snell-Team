@@ -15,13 +15,34 @@ import Classes.Map;
 import citbyui.cit260.WWWS.view.StartProgramView;
 import control.InventoryControl;
 import static control.LoanSort.loanSort;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 /**
  *
  * @author Kameron
  */
 public class CIT260Game {
+     private static PrintWriter outFile = null;
+     private static BufferedReader inFile = null;
 
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        CIT260Game.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        CIT260Game.inFile = inFile;
+    }
+
+     
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -73,6 +94,9 @@ public class CIT260Game {
 
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+        
+       
+        
         
 
 
